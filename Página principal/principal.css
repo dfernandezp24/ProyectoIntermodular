@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Bebas Neue', sans-serif;
+  background-color: #fff;
+}
+
+/* CABECERA */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(179, 157, 219);
+  padding: 0 30px;
+  border-bottom: 2px solid black;
+  height: 110px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.izquierda {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* LOGO */
+.logo-link img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* TÍTULO + BUSCADOR */
+.titulo-buscador {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nombre {
+  font-size: 60px;
+  line-height: 1;
+}
+
+.busqueda {
+  width: 250px;
+  height: 32px;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 0 12px;
+  margin-top: 5px;
+}
+
+/* MENÚ */
+.menu {
+  display: flex;
+  flex: 1; 
+  height: 100%;
+}
+
+.item {
+  position: relative;
+  flex: 1; 
+}
+
+.item a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+  font-size: 24px;
+  background-color: transparent;
+  line-height: 110px;
+}
+
+.item a.activo {
+  background-color: rgb(255, 202, 40);
+  box-shadow: none; /* quita borde extraño */
+}
+
+/* Hover menú */
+.item a:hover:not(.activo) {
+  background-color: rgb(255, 235, 160);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* SUBMENÚ */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
+  background-color: rgb(163, 140, 210);
+  width: 100%;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  z-index: 1001;
+}
+
+.submenu a {
+  width: 100%;
+  padding: 12px 0;
+  text-align: center;
+  color: black;
+  font-size: 20px;
+}
+
+.submenu a:hover {
+  background-color: rgb(255, 240, 190);
+}
+
+.item:hover .submenu {
+  display: flex;
+}
+
+/* FOOTER */
+.footer {
+  font-family: 'Noto Serif KR', serif;
+  background-color: rgb(179, 157, 219);
+  padding: 20px 50px;
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LINKS DEL FOOTER */
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  flex: 1;
+}
+
+.footer-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 4px 10px;
+}
+
+.footer-links a:hover {
+  color: rgb(255, 202, 40);
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+/* ICONOS FOOTER */
+.footer-icon {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-left: 40px;
+}
+
+.footer-icon a {
+  color: black;
+  font-size: 22px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-icon a:hover {
+  background-color: black;
+  color: rgb(179, 157, 219);
+}
+
+/* CONTENIDO */
+.contenido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* BANNER */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* TEXTO DEL BANNER DEBAJO */
+.overlay-texto {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  font-size: 32px;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 12px 20px;
+  text-align: center;
+  z-index: 3;
+}
+
+/* FLECHAS DEL BANNER */
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  z-index: 4;
+  transition: all 0.2s ease;
+}
+
+.flecha.izquierda {
+  left: 20px;
+}
+
+.flecha.derecha {
+  right: 20px;
+}
+
+.flecha:hover {
+  color: #ff4081;
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* VIDEO */
+.video-container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 2rem 0;
+  position: relative;
+  padding-top: 56.25%; 
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* BOTÓN MODO OSCURO */
+.modo-oscuro-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: white;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  color: black;
+}
