@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kpop-Wiki</title>
-  <link rel="stylesheet" href="principal.css">
+  <link rel="stylesheet" href="principalOscuro.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -54,14 +54,57 @@
 <main class="contenido">
 
   <div class="banner">
-    <a href="#">
-      <img src="/fotos/banner le sserafim.jpg" alt="Spaghetti" class="banner-img">
-      <div class="overlay-texto">
-        <p>Spaghetti el primer single album de Le Sserafim ya está disponible</p>
+    <input type="radio" name="banner" id="b1" checked>
+    <input type="radio" name="banner" id="b2">
+    <input type="radio" name="banner" id="b3">
+    <input type="radio" name="banner" id="b4">
+
+    <div class="slides">
+
+      <div class="slide">
+        <img src="/fotos/banner-le-sserafim.jpg" alt="Banner Le Sserafim">
+        <div class="overlay-texto">
+          <p>Spaghetti el primer single album de Le Sserafim ya está disponible</p>
+        </div>
+        <label for="b4" class="flecha izquierda">&#10094;</label>
+        <label for="b2" class="flecha derecha">&#10095;</label>
       </div>
-    </a>
-    <i class="fa-solid fa-chevron-left flecha izquierda"></i>
-    <i class="fa-solid fa-chevron-right flecha derecha"></i>
+
+      <div class="slide">
+        <img src="/fotos/skzDaesang.png" alt="Stray Kids album of the year">
+        <div class="overlay-texto">
+          <p>Stray Kids recibe el daesang por karma</p>
+        </div>
+        <label for="b1" class="flecha izquierda">&#10094;</label>
+        <label for="b3" class="flecha derecha">&#10095;</label>
+      </div>
+
+      <div class="slide">
+        <img src="/fotos/iveMama.png" alt="IVE actuando en los mama">
+        <div class="overlay-texto">
+          <p>IVE arrasa con Global Trend Song</p>
+        </div>
+        <label for="b2" class="flecha izquierda">&#10094;</label>
+        <label for="b4" class="flecha derecha">&#10095;</label>
+      </div>
+
+      <div class="slide">
+        <img src="/fotos/meovvKCONLA.jpeg" alt="Meovv en el escenario de la kcon LA 2025">
+        <div class="overlay-texto">
+          <p>MEOVV arrasa en KCON LA con ‘Hands Up’ y ‘Drop Top’, ganándose la ovación global</p>
+        </div>
+        <label for="b3" class="flecha izquierda">&#10094;</label>
+        <label for="b1" class="flecha derecha">&#10095;</label>
+      </div>
+
+    </div>
+
+    <div class="indicadores">
+      <label for="b1"></label>
+      <label for="b2"></label>
+      <label for="b3"></label>
+      <label for="b4"></label>
+    </div>
   </div>
 
   <h1 class="titulo-comeback">Comeback recomendado del mes</h1>
@@ -76,12 +119,11 @@
     </iframe>
   </div>
 
-  <a href="#" class="modo-oscuro-btn"><i class="fa-regular fa-sun"></i></a>
+  <a href="principal.html" class="modo-oscuro-btn"><i class="fa-regular fa-sun"></i></a>
 
 </main>
 
 <footer class="footer">
-
   <div class="footer-links">
     <a href="#">Sobre nosotros</a>
     <a href="#">Contacto</a>
@@ -93,8 +135,15 @@
     <a href="#"><i class="fa-brands fa-instagram"></i></a>
     <a href="#"><i class="fa-brands fa-discord"></i></a>
   </div>
-
 </footer>
+
+<div class="creditos">
+  <a href="https://www.kpop-wiki.com">Kpop-Wiki</a> © 2026 by <a href="https://example.com">David Fernández</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+  <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="">
+  <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="">
+  <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="">
+  <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="">
+</div>
 
 </body>
 </html>
