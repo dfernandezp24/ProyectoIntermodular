@@ -256,6 +256,10 @@ body {
   right: 20px;
 }
 
+.flecha:hover{
+  color: #ff4081;
+}
+
 .indicadores {
   position: absolute;
   bottom: 10px;
