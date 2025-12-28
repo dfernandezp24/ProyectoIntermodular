@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kpop-Wiki</title>
-  <link rel="stylesheet" href="principal.css">
+  <link rel="stylesheet" href="css/lightMode.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -15,11 +15,11 @@
 
 <header class="header">
   <div class="izquierda">
-    <a href="principal.html" class="logo-link">
+    <a href="/PaginaPrincipal/principal.html" class="logo-link">
       <img src="/fotos/logo.jpeg" alt="Logo" class="logo">
     </a>
     <form class="titulo-buscador">
-      <a href="principal.html" class="nombre-link">
+      <a href="/PaginaPrincipal/principal.html" class="nombre-link">
         <h1 class="nombre">Kpop-Wiki</h1>
       </a>
       <input type="text" class="busqueda" placeholder="Buscar...">
@@ -27,9 +27,9 @@
   </div>
 
   <nav class="menu">
-    <div class="item"><a href="principal.html" class="activo">Inicio</a></div>
+    <div class="item"><a href="/PaginaPrincipal/principal.html" class="activo">Inicio</a></div>
     <div class="item">
-      <a href="#">Comebacks</a>
+      <a href="/Comeback/comebackSelector.html">Comebacks</a>
       <div class="submenu">
         <a href="#">Comebacks recientes</a>
         <a href="#">Canciones virales</a>
@@ -57,6 +57,7 @@
     <input type="radio" name="banner" id="b2">
     <input type="radio" name="banner" id="b3">
     <input type="radio" name="banner" id="b4">
+    <input type="radio" name="banner" id="b5">
 
     <div class="slides">
 
@@ -65,12 +66,12 @@
         <div class="overlay-texto">
           <p>Spaghetti el primer single album de Le Sserafim ya está disponible</p>
         </div>
-        <label for="b4" class="flecha izquierda">&#10094;</label>
+        <label for="b5" class="flecha izquierda">&#10094;</label>
         <label for="b2" class="flecha derecha">&#10095;</label>
       </div>
 
       <div class="slide">
-        <img src="/fotos/skzDaesang.png" alt="Stray Kids album of the year">
+        <img src="/fotos/skzDaesang.jpg" alt="Stray Kids album of the year">
         <div class="overlay-texto">
           <p>Stray Kids recibe el daesang por karma</p>
         </div>
@@ -79,20 +80,29 @@
       </div>
 
       <div class="slide">
-        <img src="/fotos/iveMama.png" alt="IVE actuando en los mama">
+        <img src="/fotos/iveMama.jpg" alt="IVE actuando en los mama">
         <div class="overlay-texto">
-          <p>IVE arrasa con Global Trend Song</p>
+          <p>IVE recibe un premio en los MAMA en la categoría Global Trend Song</p>
         </div>
         <label for="b2" class="flecha izquierda">&#10094;</label>
         <label for="b4" class="flecha derecha">&#10095;</label>
       </div>
 
       <div class="slide">
-        <img src="/fotos/meovvKCONLA.jpeg" alt="Meovv en el escenario de la kcon LA 2025">
+        <img src="/fotos/illitNotCuteAnyMore.jpeg" alt="Fotografia de uno de los conceptos del primer single album de Illit Not Cute Anymore">
         <div class="overlay-texto">
-          <p>MEOVV arrasa en KCON LA con ‘Hands Up’ y ‘Drop Top’, ganándose la ovación global</p>
+          <p>Illit arrasa globalmente en todas las plataformas con su primer single album Not Cute Anymore</p>
         </div>
         <label for="b3" class="flecha izquierda">&#10094;</label>
+        <label for="b5" class="flecha derecha">&#10095;</label>
+      </div>
+
+      <div class="slide">
+        <img src="/fotos/kep1WaterBomb.jpeg" alt="Kep1er en el waterbomb 2025">
+        <div class="overlay-texto">
+          <p>Kep1er sigue presente en los grandes escenarios de 2025</p>
+        </div>
+        <label for="b4" class="flecha izquierda">&#10094;</label>
         <label for="b1" class="flecha derecha">&#10095;</label>
       </div>
 
@@ -103,6 +113,7 @@
       <label for="b2"></label>
       <label for="b3"></label>
       <label for="b4"></label>
+      <label for="b5"></label>
     </div>
   </div>
 
@@ -110,8 +121,8 @@
 
   <div class="video-container">
     <iframe 
-      src="https://www.youtube.com/embed/2GPFLanHujM"
-      title="연준 (YEONJUN) 'NO LABELS: PART 01' Official MV"
+      src="https://www.youtube.com/embed/E8i32NXMxnc"
+      title="Stray Kids &quot;신선놀음 (DIVINE)&quot; M/V"
       frameborder="0"
       allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
       allowfullscreen>
