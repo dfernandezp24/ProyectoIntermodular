@@ -9,8 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Bebas Neue', sans-serif;
-  background-color: black;
-  color: white;
+  background-color: #fff;
 }
 
 /* CABECERA */
@@ -49,10 +48,11 @@ body {
   font-size: 60px;
   line-height: 60px;
   color: black;
+  transition: all 0.3s ease;
 }
 
 .nombre:hover {
-  text-shadow: 0 0 8px white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .busqueda {
@@ -62,8 +62,6 @@ body {
   border: 1px solid black;
   padding: 0 12px;
   margin-top: 5px;
-  background-color: white;
-  color: black;
 }
 
 /* MENÚ */
@@ -87,7 +85,6 @@ body {
   text-decoration: none;
   color: black;
   font-size: 24px;
-  background-color: transparent;
 }
 
 .item a.activo {
@@ -111,7 +108,6 @@ body {
 }
 
 .submenu a {
-  width: 100%;
   padding: 12px 0;
   text-align: center;
   color: black;
@@ -131,16 +127,18 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: black;
+  background-color: white;
   border-radius: 50%;
   padding: 15px;
   font-size: 24px;
-  color: white;
+  color: black;
+  transition: all 0.3s ease;
 }
 
 .modo-oscuro-btn:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
 }
 
 /* FOOTER */
@@ -166,6 +164,7 @@ body {
   text-decoration: none;
   font-size: 16px;
   padding: 4px 10px;
+  transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -188,11 +187,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .footer-icon a:hover {
+  color: white;
   background-color: black;
-  color: rgb(179, 157, 219);
 }
 
 /* CRÉDITOS LICENCIA */
@@ -205,7 +205,7 @@ body {
 }
 
 .creditos a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -216,91 +216,75 @@ body {
   vertical-align: middle;
 }
 
-
-/* SELECTOR COMEBACKS */
-
-.seleccionador {
+/* COMEBACKS RECIENTES */
+.comebacks-recientes {
   display: grid;
-  grid-template-columns: 1fr 360px 1fr; 
-  grid-template-rows: 200px 200px 200px; 
-  justify-items: center;
-  align-items: center;
-  gap: 10px; 
-  margin: 80px auto 120px auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  max-width: 1600px;
+  margin: 80px auto 120px;
+  padding: 0 40px;
 }
 
-.seleccionador .card {
-  background-color: #2b2b2b;       
-  color: #f4f1fb;                 
-  text-decoration: none;
-  border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 360px;
-  height: 180px;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
-  overflow: hidden;
+.comeback-card {
+  background-color: #f4f1fb;
+  border-radius: 14px;
+  padding: 15px;
+  text-align: center;
 }
 
-.seleccionador .card:hover {
-  background-color: #3b3b3b;       
-  box-shadow: 0 10px 30px rgba(255, 235, 59, 0.3); 
+.comeback-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.seleccionador .card img {
-  width: 130px;
-  height: 100%;
+.comeback-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 4px;
-  margin-right: 15px;
+  border-radius: 10px;
 }
 
-.seleccionador .card-text {
+.comeback-links {
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  flex: 1;
-  overflow: hidden;
+  gap: 14px;
+  margin: 12px 0;
 }
 
-.seleccionador .card-text h3 {
-  font-size: 20px;
-  margin-bottom: 6px;
-  line-height: 1.2;
-  color: #f4f1fb;                 
+.comeback-links a {
+  display: inline-flex;          
+  align-items: center;
+  justify-content: center;
+  width: 32px;                    
+  height: 32px;                   
+  color: black;
+  text-decoration: none;
+  border-radius: 50%;
 }
 
-.seleccionador .card-text p {
-  font-family: 'Noto Serif KR', serif;
+.comeback-links a:hover {
+  font-weight: bold;
+}
+
+.comeback-info h3 {
+  font-size: 24px;
+  margin-top: 6px;
+}
+
+.comeback-info .album {
+  font-size: 16px;
+  font-style: italic;
+  margin: 4px 0;
+}
+
+.comeback-info .extra {
   font-size: 14px;
-  line-height: 1.4;
-  word-break: break-word;
-  color: #f4f1fb;                
+  opacity: 0.7;
 }
 
-/* POSICIONES EN EL GRID */
-.seleccionador .top {
-  grid-column: 2;
-  grid-row: 1;
-  justify-self: center;
-}
-
-.seleccionador .right {
-  grid-column: 3;
-  grid-row: 2;
-  justify-self: end;
-}
-
-.seleccionador .bottom {
-  grid-column: 2;
-  grid-row: 3;
-  justify-self: center;
-}
-
-.seleccionador .left {
-  grid-column: 1;
-  grid-row: 2;
-  justify-self: start;
+.comeback-links a:hover {
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  transform: scale(1.2); 
 }
