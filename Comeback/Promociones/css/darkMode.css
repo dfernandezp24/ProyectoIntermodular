@@ -216,101 +216,83 @@ body {
   vertical-align: middle;
 }
 
-/* VIRALES */
-
-.virales {
+/* PROMOCIONES - DARK MODE */
+.promociones {
   width: 85%;
-  margin: 0 auto 120px;
+  margin: 0 auto 120px auto;
 }
 
-.virales h2 {
+.promociones h2 {
   font-size: 32px;
   margin-bottom: 40px;
+  text-align: center;
+  color: #f4f1fb; /* título claro sobre fondo oscuro */
+}
+
+.promociones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.promo-card {
+  background-color: #2b2b2b; /* card oscura */
+  border-radius: 14px;
+  overflow: hidden;
   text-align: center;
   color: #f4f1fb;
 }
 
-.virales-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px 40px;
+.promo-card:hover {
+  box-shadow: 0 10px 20px rgba(255, 235, 59, 0.35); /* acento amarillo en hover */
 }
 
-.viral-row {
-  background-color: #2b2b2b;
-  color: #f4f1fb;
-  border-radius: 12px;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.viral-row:hover {
-  box-shadow: 0 10px 20px rgba(255, 235, 59, 0.25);
-}
-
-.ranking {
-  font-size: 26px;
-  font-weight: bold;
-  color: #ffeb3b;
-  min-width: 40px;
-}
-
-.viral-row img {
-  width: 70px;
-  height: 70px;
+.promo-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
-.viral-info {
-  flex: 1;
-  overflow: hidden;
+.promo-info {
+  padding: 14px 12px 10px;
 }
 
-.viral-info h3 {
-  font-size: 18px;
+.promo-info h3 {
+  font-size: 20px;
   margin-bottom: 4px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.viral-info .artista {
-  font-size: 14px;
-  opacity: 0.9;
-}
-
-.viral-info .extra {
-  font-size: 13px;
-  opacity: 0.7;
-}
-
-/* LINKS */
-.viral-links {
-  display: flex;
-  gap: 10px;
-}
-
-.viral-links a {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 32px;
   color: #f4f1fb;
+}
+
+.promo-info .cancion {
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 4px;
+  color: #f4f1fb;
+}
+
+.promo-info .programa {
+  font-size: 14px;
+  opacity: 0.7;
+  color: #f4f1fb;
+}
+
+.promo-youtube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
   text-decoration: none;
-  border-radius: 50%;
+  color: #f4f1fb;
+  font-size: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.viral-links a:hover {
-  background-color: #ffeb3b;
-  color: #000;
-  transform: scale(1.2);
+.promo-youtube:hover {
+  background-color: #ffeb3b; /* hover amarillo para mantener coherencia */
+  color: black;
 }
 
-/* PAGINACIÓN */
 .paginacion {
   margin-top: 60px;
   display: flex;
@@ -332,11 +314,11 @@ body {
 }
 
 .paginacion a:hover {
-  background-color: #ffeb3b;
-  color: #000;
+  background-color: #ffeb3b; /* hover amarillo */
+  color: black;
 }
 
 .paginacion .activo {
-  background-color: #ffeb3b;
-  color: #000;
+  background-color: #ffeb3b; /* activo amarillo */
+  color: black;
 }

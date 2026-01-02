@@ -9,8 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Bebas Neue', sans-serif;
-  background-color: black;
-  color: white;
+  background-color: #fff;
 }
 
 /* CABECERA */
@@ -49,10 +48,11 @@ body {
   font-size: 60px;
   line-height: 60px;
   color: black;
+  transition: all 0.3s ease;
 }
 
 .nombre:hover {
-  text-shadow: 0 0 8px white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .busqueda {
@@ -62,8 +62,6 @@ body {
   border: 1px solid black;
   padding: 0 12px;
   margin-top: 5px;
-  background-color: white;
-  color: black;
 }
 
 /* MENÚ */
@@ -87,7 +85,6 @@ body {
   text-decoration: none;
   color: black;
   font-size: 24px;
-  background-color: transparent;
 }
 
 .item a.activo {
@@ -111,7 +108,6 @@ body {
 }
 
 .submenu a {
-  width: 100%;
   padding: 12px 0;
   text-align: center;
   color: black;
@@ -131,16 +127,18 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: black;
+  background-color: white;
   border-radius: 50%;
   padding: 15px;
   font-size: 24px;
-  color: white;
+  color: black;
+  transition: all 0.3s ease;
 }
 
 .modo-oscuro-btn:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
 }
 
 /* FOOTER */
@@ -166,6 +164,7 @@ body {
   text-decoration: none;
   font-size: 16px;
   padding: 4px 10px;
+  transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -188,11 +187,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .footer-icon a:hover {
+  color: white;
   background-color: black;
-  color: rgb(179, 157, 219);
 }
 
 /* CRÉDITOS LICENCIA */
@@ -205,7 +205,7 @@ body {
 }
 
 .creditos a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -216,101 +216,78 @@ body {
   vertical-align: middle;
 }
 
-/* VIRALES */
-
-.virales {
+/* PROMOCIONES */
+.promociones {
   width: 85%;
-  margin: 0 auto 120px;
+  margin: 0 auto 120px auto;
 }
 
-.virales h2 {
+.promociones h2 {
   font-size: 32px;
   margin-bottom: 40px;
   text-align: center;
-  color: #f4f1fb;
+  color: #3a3a3a;
 }
 
-.virales-grid {
+.promociones-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px 40px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
 }
 
-.viral-row {
-  background-color: #2b2b2b;
-  color: #f4f1fb;
-  border-radius: 12px;
-  padding: 15px 20px;
-  display: flex;
-  align-items: center;
-  gap: 18px;
+.promo-card {
+  background-color: #f4f1fb;
+  border-radius: 14px;
+  overflow: hidden;
+  text-align: center;
 }
 
-.viral-row:hover {
-  box-shadow: 0 10px 20px rgba(255, 235, 59, 0.25);
+.promo-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.ranking {
-  font-size: 26px;
-  font-weight: bold;
-  color: #ffeb3b;
-  min-width: 40px;
-}
-
-.viral-row img {
-  width: 70px;
-  height: 70px;
+.promo-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  border-radius: 8px;
 }
 
-.viral-info {
-  flex: 1;
-  overflow: hidden;
+.promo-info {
+  padding: 14px 12px 10px;
 }
 
-.viral-info h3 {
-  font-size: 18px;
+.promo-info h3 {
+  font-size: 20px;
   margin-bottom: 4px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
-.viral-info .artista {
+.promo-info .cancion {
+  font-size: 15px;
+  font-style: italic;
+  margin-bottom: 4px;
+}
+
+.promo-info .programa {
   font-size: 14px;
-  opacity: 0.9;
+  opacity: 0.75;
 }
 
-.viral-info .extra {
-  font-size: 13px;
-  opacity: 0.7;
-}
-
-/* LINKS */
-.viral-links {
+.promo-youtube {
   display: flex;
-  gap: 10px;
-}
-
-.viral-links a {
-  display: inline-flex;
-  align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  color: #f4f1fb;
+  align-items: center;
+  height: 44px;
   text-decoration: none;
-  border-radius: 50%;
+  color: black;
+  font-size: 22px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.viral-links a:hover {
-  background-color: #ffeb3b;
-  color: #000;
-  transform: scale(1.2);
+.promo-youtube:hover {
+  background-color: black;
+  color: white;
 }
 
-/* PAGINACIÓN */
 .paginacion {
   margin-top: 60px;
   display: flex;
@@ -325,18 +302,17 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background-color: #2b2b2b;
-  color: #f4f1fb;
+  background-color: #f4f1fb;
+  color: black;
   border-radius: 50%;
   font-size: 14px;
 }
 
 .paginacion a:hover {
-  background-color: #ffeb3b;
-  color: #000;
+  background-color: #e0d0ff;
 }
 
 .paginacion .activo {
-  background-color: #ffeb3b;
-  color: #000;
+  background-color: black;
+  color: white;
 }
