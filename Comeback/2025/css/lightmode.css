@@ -9,8 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Bebas Neue', sans-serif;
-  background-color: black;
-  color: white;
+  background-color: #fff;
 }
 
 /* CABECERA */
@@ -49,10 +48,11 @@ body {
   font-size: 60px;
   line-height: 60px;
   color: black;
+  transition: all 0.3s ease;
 }
 
 .nombre:hover {
-  text-shadow: 0 0 8px white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 .busqueda {
@@ -62,8 +62,6 @@ body {
   border: 1px solid black;
   padding: 0 12px;
   margin-top: 5px;
-  background-color: white;
-  color: black;
 }
 
 /* MENÚ */
@@ -87,7 +85,6 @@ body {
   text-decoration: none;
   color: black;
   font-size: 24px;
-  background-color: transparent;
 }
 
 .item a.activo {
@@ -111,7 +108,6 @@ body {
 }
 
 .submenu a {
-  width: 100%;
   padding: 12px 0;
   text-align: center;
   color: black;
@@ -131,16 +127,18 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: black;
+  background-color: white;
   border-radius: 50%;
   padding: 15px;
   font-size: 24px;
-  color: white;
+  color: black;
+  transition: all 0.3s ease;
 }
 
 .modo-oscuro-btn:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
+  transform: scale(1.1);
 }
 
 /* FOOTER */
@@ -166,6 +164,7 @@ body {
   text-decoration: none;
   font-size: 16px;
   padding: 4px 10px;
+  transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
@@ -188,11 +187,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
 }
 
 .footer-icon a:hover {
+  color: white;
   background-color: black;
-  color: rgb(179, 157, 219);
 }
 
 /* CRÉDITOS LICENCIA */
@@ -205,7 +205,7 @@ body {
 }
 
 .creditos a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -216,88 +216,111 @@ body {
   vertical-align: middle;
 }
 
-/* PROMOCIONES  */
-.promociones {
-  width: 85%;
-  margin: 0 auto 120px auto;
-}
+/* CB 2025 */
 
-.promociones h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
+.comebacks-recientes h2 {
   text-align: center;
-  color: #f4f1fb; 
+  font-size: 36px;
+  margin: 50px 0 40px;
 }
 
-.promociones-grid {
+.comeback-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 35px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  max-width: 1600px;
+  margin: 0 auto 120px;
+  padding: 0 20px;
 }
 
-.promo-card {
-  background-color: #2b2b2b; 
+.comeback-card {
+  background-color: #f4f1fb;
   border-radius: 14px;
-  overflow: hidden;
+  padding: 12px;
   text-align: center;
-  color: #f4f1fb;
 }
 
-.promo-card:hover {
-  box-shadow: 0 10px 20px rgba(255, 235, 59, 0.35); 
+.comeback-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
-.promo-card img {
+.comeback-card img {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 10px;
 }
 
-.promo-info {
-  padding: 14px 12px 10px;
-}
-
-.promo-info h3 {
+.comeback-info h3 {
   font-size: 20px;
-  margin-bottom: 4px;
-  color: #f4f1fb;
+  margin: 8px 0 4px;
 }
 
-.promo-info .cancion {
-  font-size: 15px;
-  font-style: italic;
-  margin-bottom: 4px;
-  color: #f4f1fb;
+.grupo {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #3a3a3a;  
 }
 
-.promo-info .programa {
-  font-size: 14px;
-  opacity: 0.7;
-  color: #f4f1fb;
-}
-
-.promo-youtube {
+.badges {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 44px;
-  text-decoration: none;
-  color: #f4f1fb;
-  font-size: 22px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  gap: 6px;
+  margin-bottom: 6px;
 }
 
-.promo-youtube:hover {
-  background-color: #ffeb3b; 
+.badge {
+  font-size: 14px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.badge.empresa {
+  background-color: #b39ddb;
+  color: #000;
+}
+
+.badge.hot {
+  background-color: #ffeb3b;
+  color: #000;
+}
+
+.extra {
+  font-size: 14px;
+  color: #3a3a3a;
+  margin-bottom: 8px;
+}
+
+.comeback-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.comeback-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
   color: black;
+  text-decoration: none;
+}
+
+.comeback-links a:hover {
+  color: white;
+  background-color: black;
 }
 
 .paginacion {
-  margin-top: 60px;
+  margin: 60px 0 120px;
   display: flex;
   justify-content: center;
-  gap: 12px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .paginacion a {
@@ -307,18 +330,17 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  background-color: #2b2b2b;
-  color: #f4f1fb;
+  background-color: #f4f1fb;
+  color: black;
   border-radius: 50%;
   font-size: 14px;
 }
 
 .paginacion a:hover {
-  background-color: #ffeb3b;
-  color: black;
+  background-color: #e0d0ff;
 }
 
 .paginacion .activo {
-  background-color: #ffeb3b; 
-  color: black;
+  background-color: black;
+  color: white;
 }
