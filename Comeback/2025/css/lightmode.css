@@ -275,6 +275,8 @@ body {
   padding: 2px 6px;
   border-radius: 6px;
   font-weight: bold;
+  position: relative;
+  overflow: hidden;
 }
 
 .badge.empresa {
@@ -285,6 +287,41 @@ body {
 .badge.hot {
   background-color: #ffeb3b;
   color: #000;
+}
+
+.badge.hot::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: hotShine 3s ease-in-out infinite;
+}
+
+
+.badge.debut {
+  color: #000;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.badge.debut-girl {
+  background-color: #f3b6d6;
+  color: #000;
+  animation: debutPulseGirl 2.5s ease-in-out infinite;
+}
+
+.badge.debut-boy {
+  background-color: #9ecbff;
+  color: #000;
+  animation: debutPulseBoy 2.5s ease-in-out infinite;
 }
 
 .extra {
@@ -344,3 +381,32 @@ body {
   background-color: black;
   color: white;
 }
+
+
+/* ANIMACIONES */
+
+@keyframes debutPulseGirl {
+  0% { box-shadow: 0 0 0 rgba(100, 0, 100, 0); }
+  50% { box-shadow: 0 0 10px rgba(100, 0, 100, 0.5); }
+  100% { box-shadow: 0 0 0 rgba(100, 0, 100, 0); }
+}
+
+@keyframes debutPulseBoy {
+  0% { box-shadow: 0 0 0 rgba(0, 100, 200, 0); }
+  50% { box-shadow: 0 0 10px rgba(0, 100, 200, 0.5); }
+  100% { box-shadow: 0 0 0 rgba(0, 100, 200, 0); }
+}
+
+@keyframes hotShine {
+  0% {
+    left: -100%;
+  }
+  40% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
