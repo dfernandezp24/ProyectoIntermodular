@@ -240,13 +240,12 @@ body {
 .wiki-top {
   display: grid;
   grid-template-columns: 300px 1fr 300px;
-  grid-template-rows: auto 1fr;
   gap: 30px;
+  align-items: start;
 }
 
 .wiki-toc {
   grid-column: 1 / 2;
-  grid-row: 1 / 2;
   background-color: #f4f1fb;
   padding: 20px;
   border-radius: 14px;
@@ -289,18 +288,14 @@ body {
 }
 
 .wiki-content {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-column: 2 / 3;
 }
 
 .wiki-info {
   grid-column: 3 / 4;
-  grid-row: 1 / 3;
   background-color: #f4f1fb;
   padding: 20px;
   border-radius: 14px;
-  position: sticky;
-  top: 20px;
 }
 
 .wiki-info img {
@@ -360,6 +355,7 @@ body {
   line-height: 1.6;
   margin: 8px 0 16px;
   color: #222;
+  text-align: justify;
 }
 
 .wiki-content ul {
