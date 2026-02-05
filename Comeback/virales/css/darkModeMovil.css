@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CABECERA */
+.header {
+  flex-direction: column;
+  height: auto;
+  padding: 10px 15px;
+}
+
+.izquierda {
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.logo-link,
+.busqueda {
+  display: none;
+}
+
+.titulo-buscador {
+  align-items: center;
+}
+
+.nombre {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* MENÚ */
+.menu {
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.item a {
+  height: 60px;
+  font-size: 20px;
+}
+
+
+.submenu {
+  display: none 
+}
+
+.item:hover .submenu {
+  display: none 
+}
+
+/* FOOTER */
+.footer {
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.footer-links {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-icon {
+  margin-left: 0;
+  justify-content: center;
+}
+
+/* BOTÓN MODO OSCURO */
+.modo-oscuro-btn {
+  bottom: 15px;
+  right: 15px;
+  padding: 12px;
+  font-size: 20px;
+}
+
+
+/* VIRALES */
+.virales {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.virales-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.viral-row {
+  display: flex;
+  flex-direction: row;  
+  align-items: center;
+  padding: 10px;
+  gap: 10px;            
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  width: 100%;           
+  overflow: hidden;      
+}
+
+.viral-row img {
+  width: 70px;   
+  height: 70px;
+  flex-shrink: 0; 
+  border-radius: 6px;
+}
+
+.viral-info {
+  flex: 1;
+  min-width: 0;   
+  overflow: hidden;
+}
+
+.viral-links {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0; 
+}

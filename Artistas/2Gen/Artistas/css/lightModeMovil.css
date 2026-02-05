@@ -1,0 +1,119 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* CABECERA */
+.header {
+  flex-direction: column;
+  height: auto;
+  padding: 10px 15px;
+}
+
+.izquierda {
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.logo-link,
+.busqueda {
+  display: none;
+}
+
+.titulo-buscador {
+  align-items: center;
+}
+
+.nombre {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+/* MENÚ */
+.menu {
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.item a {
+  height: 60px;
+  font-size: 20px;
+}
+
+
+.submenu {
+  display: none 
+}
+
+.item:hover .submenu {
+  display: none 
+}
+
+/* FOOTER */
+.footer {
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.footer-links {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-icon {
+  margin-left: 0;
+  justify-content: center;
+}
+
+/* BOTÓN MODO OSCURO */
+.modo-oscuro-btn {
+  bottom: 15px;
+  right: 15px;
+  padding: 12px;
+  font-size: 20px;
+}
+
+/* WIKI-GRUPOS */
+
+.wiki-top {
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.wiki-toc {
+  grid-column: auto;
+  order: 1;
+}
+
+.wiki-content {
+  grid-column: auto;
+  order: 2;
+}
+
+.wiki-info {
+  grid-column: auto;
+  order: 3;
+  margin-top: 20px;
+}
+
+.wiki-page h1 {
+  font-size: 42px;
+}
+
+.wiki-content h2 {
+  font-size: 26px;
+}
+
+.wiki-content h3 {
+  font-size: 20px;
+}
+
+.wiki-content p,
+.wiki-info ul li {
+  font-size: 15px;
+}

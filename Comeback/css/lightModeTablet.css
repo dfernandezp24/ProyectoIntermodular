@@ -1,0 +1,83 @@
+
+/* HEADER */
+.header {
+  padding: 0 20px;
+}
+
+.logo-link img {
+  height: 70px;
+  width: 70px;
+}
+
+
+.busqueda {
+  display: none;
+}
+
+.nombre {
+  font-size: 48px;
+  line-height: 48px;  
+  margin-right: 20px;
+}
+
+/* MENÚ */
+.menu {
+  height: 90px;
+}
+
+.item a {
+  height: 90px;
+  font-size: 22px;
+}
+
+.submenu {
+  display: none;
+}
+
+.item:hover .submenu {
+  display: none;
+}
+
+.modo-oscuro-btn {
+  bottom: 15px;
+  right: 15px;
+  padding: 12px;
+  font-size: 20px;
+}
+
+/* FOOTER */
+.footer {
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.footer-links {
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer-icon {
+  margin-left: 0;
+  justify-content: center;
+}
+
+  /* Selector Comebacks */
+  .seleccionador {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    margin: 60px auto;
+  }
+
+  .seleccionador .top,
+  .seleccionador .right,
+  .seleccionador .bottom,
+  .seleccionador .left {
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: center;
+  }

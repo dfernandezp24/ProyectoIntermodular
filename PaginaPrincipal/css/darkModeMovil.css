@@ -1,0 +1,93 @@
+/* HEADER */
+.header {
+  flex-direction: column;
+  height: auto;
+  padding: 10px 15px;
+}
+
+.izquierda {
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.logo-link {
+  display: none;
+}
+
+.busqueda {
+  display: none;
+}
+
+
+.nombre {
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+/* MENÚ */
+.menu {
+  flex-direction: column;
+  height: auto;
+  width: 100%;
+}
+
+.item a {
+  height: 60px;
+  font-size: 20px;
+}
+
+
+.submenu {
+  display: none;
+}
+
+.item:hover .submenu {
+  display: none;
+}
+
+/* FOOTER */
+.footer {
+  flex-direction: column;
+  gap: 15px;
+  text-align: center;
+}
+
+.footer-links {
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-icon {
+  margin-left: 0;
+  justify-content: center;
+}
+
+/* BANNER */
+.banner {
+  height: 300px;
+}
+
+.overlay-texto {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.flecha {
+  font-size: 32px;
+  top: 130px;
+}
+
+/* COMEBACKS */
+.titulo-comeback {
+  font-size: 32px;
+}
+
+.modo-oscuro-btn {
+  bottom: 15px;
+  right: 15px;
+  padding: 12px;
+  font-size: 20px;
+}
