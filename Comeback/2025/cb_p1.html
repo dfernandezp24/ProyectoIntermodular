@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kpop-Wiki</title>
-  <link rel="stylesheet" href="css/lightMode.css">
-  <link rel="stylesheet" href="css/lightModeTablet.css" media="(min-width: 601px) and (max-width: 1024px)">
-  <link rel="stylesheet" href="css/lightModeMovil.css" media="(max-width: 600px)">
+  <link id="theme-main" rel="stylesheet" href="css/lightMode.css">
+  <link id="theme-tablet" rel="stylesheet" href="css/lightModeTablet.css" media="(min-width: 601px) and (max-width: 1024px)">
+  <link id="theme-mobile" rel="stylesheet" href="css/lightModeMovil.css" media="(max-width: 600px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -148,9 +148,7 @@
       <a href="cb_p12.html">Dic</a>
     </nav>
 
-  <a href="/Comeback/2025/cbOscuro_p1.html" class="modo-oscuro-btn">
-    <i class="fa-regular fa-moon"></i>
-  </a>
+  <a href="#" id="theme-toggle" class="modo-oscuro-btn"><i id="theme-icon" class="fa-regular fa-moon"></i></a>
 
 <footer class="footer">
   <div class="footer-links">
@@ -176,5 +174,9 @@
   <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="">
 </div>
 
+  <script src="js/app.js"></script>
 </body>
 </html>
+
+
+

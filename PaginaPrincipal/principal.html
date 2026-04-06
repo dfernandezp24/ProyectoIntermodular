@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kpop-Wiki</title>
-  <link rel="stylesheet" href="css/lightMode.css">
-  <link rel="stylesheet" href="css/lightModeTablet.css" media="screen and (min-width: 601px) and (max-width: 1024px)">>
-  <link rel="stylesheet" href="css/lightModeMovil.css" media="(max-width: 600px)">
+  <link id="theme-main" rel="stylesheet" href="css/lightMode.css">
+  <link id="theme-tablet" rel="stylesheet" href="css/lightModeTablet.css" media="screen and (min-width: 601px) and (max-width: 1024px)">
+  <link id="theme-mobile" rel="stylesheet" href="css/lightModeMovil.css" media="(max-width: 600px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -55,11 +55,6 @@
 <main class="contenido">
 
   <div class="banner">
-    <input type="radio" name="banner" id="b1" checked>
-    <input type="radio" name="banner" id="b2">
-    <input type="radio" name="banner" id="b3">
-    <input type="radio" name="banner" id="b4">
-    <input type="radio" name="banner" id="b5">
 
     <div class="slides">
 
@@ -68,8 +63,8 @@
         <div class="overlay-texto">
           <p>Spaghetti el primer single album de Le Sserafim ya está disponible</p>
         </div>
-        <label for="b5" class="flecha izquierda">&#10094;</label>
-        <label for="b2" class="flecha derecha">&#10095;</label>
+        <div class="flecha izquierda">&#10094;</div>
+        <div class="flecha derecha">&#10095;</div>
       </div>
 
       <div class="slide">
@@ -77,8 +72,8 @@
         <div class="overlay-texto">
           <p>Stray Kids recibe el daesang por karma</p>
         </div>
-        <label for="b1" class="flecha izquierda">&#10094;</label>
-        <label for="b3" class="flecha derecha">&#10095;</label>
+        <div class="flecha izquierda">&#10094;</div>
+        <div class="flecha derecha">&#10095;</div>
       </div>
 
       <div class="slide">
@@ -86,8 +81,8 @@
         <div class="overlay-texto">
           <p>IVE recibe un premio en los MAMA en la categoría Global Trend Song</p>
         </div>
-        <label for="b2" class="flecha izquierda">&#10094;</label>
-        <label for="b4" class="flecha derecha">&#10095;</label>
+        <div class="flecha izquierda">&#10094;</div>
+        <div class="flecha derecha">&#10095;</div>
       </div>
 
       <div class="slide">
@@ -95,8 +90,8 @@
         <div class="overlay-texto">
           <p>Illit arrasa globalmente en todas las plataformas con su primer single album Not Cute Anymore</p>
         </div>
-        <label for="b3" class="flecha izquierda">&#10094;</label>
-        <label for="b5" class="flecha derecha">&#10095;</label>
+        <div class="flecha izquierda">&#10094;</div>
+        <div class="flecha derecha">&#10095;</div>
       </div>
 
       <div class="slide">
@@ -104,18 +99,18 @@
         <div class="overlay-texto">
           <p>Kep1er sigue presente en los grandes escenarios de 2025</p>
         </div>
-        <label for="b4" class="flecha izquierda">&#10094;</label>
-        <label for="b1" class="flecha derecha">&#10095;</label>
+        <div class="flecha izquierda">&#10094;</div>
+        <div class="flecha derecha">&#10095;</div>
       </div>
 
     </div>
 
     <div class="indicadores">
-      <label for="b1"></label>
-      <label for="b2"></label>
-      <label for="b3"></label>
-      <label for="b4"></label>
-      <label for="b5"></label>
+      <div class="punto active" data-index="0"></div>
+      <div class="punto" data-index="1"></div>
+      <div class="punto" data-index="2"></div>
+      <div class="punto" data-index="3"></div>
+      <div class="punto" data-index="4"></div>
     </div>
   </div>
 
@@ -131,7 +126,7 @@
     </iframe>
   </div>
 
-  <a href="principalOscuro.html" class="modo-oscuro-btn"><i class="fa-regular fa-moon"></i></a>
+  <a href="#" id="theme-toggle" class="modo-oscuro-btn"><i id="theme-icon" class="fa-regular fa-moon"></i></a>
 
 </main>
 
@@ -157,5 +152,9 @@
   <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="">
 </div>
 
+  <script src="js/app.js"></script>
 </body>
 </html>
+
+
+

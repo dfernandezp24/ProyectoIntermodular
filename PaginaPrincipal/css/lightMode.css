@@ -198,9 +198,6 @@ body {
   background-color: #fff;
 }
 
-.banner input {
-  display: none;
-}
 
 .slides {
   display: flex;
@@ -247,6 +244,7 @@ body {
   font-size: 48px;
   color: white;
   z-index: 10;
+  cursor: pointer;
 }
 
 .flecha.izquierda {
@@ -271,25 +269,17 @@ body {
   gap: 8px;
 }
 
-.indicadores label {
+.indicadores .punto {
   width: 12px;
   height: 12px;
   background: #ccc;
   border-radius: 50%;
   display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease;
 }
 
-#b1:checked ~ .slides { transform: translateX(0); }
-#b2:checked ~ .slides { transform: translateX(-100%); }
-#b3:checked ~ .slides { transform: translateX(-200%); }
-#b4:checked ~ .slides { transform: translateX(-300%); }
-#b5:checked ~ .slides { transform: translateX(-400%); }
-
-#b1:checked ~ .indicadores label[for="b1"],
-#b2:checked ~ .indicadores label[for="b2"],
-#b3:checked ~ .indicadores label[for="b3"],
-#b4:checked ~ .indicadores label[for="b4"],
-#b5:checked ~ .indicadores label[for="b5"]  {
+.indicadores .punto.active {
   background: white;
 }
 

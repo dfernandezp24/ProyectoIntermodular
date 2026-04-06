@@ -70,6 +70,12 @@
   height: 300px;
 }
 
+.indicadores .punto {
+  width: 10px;
+  height: 10px;
+  background-color: #ff4081;
+}
+
 .overlay-texto {
   font-size: 20px;
   padding: 10px;

@@ -93,9 +93,10 @@
 }
 
 
-.indicadores label {
+.indicadores .punto {
   width: 10px;
   height: 10px;
+  background-color: #ff4081;
 }
 
 
