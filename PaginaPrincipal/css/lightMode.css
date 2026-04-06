@@ -38,10 +38,15 @@ body {
   object-fit: contain;
 }
 
-.titulo-buscador {
+.izquierda {
+  display: flex !important;
+  align-items: center;
+  gap: 20px;
+}
+
+.nombre-link {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 .nombre {
@@ -55,13 +60,20 @@ body {
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
+.buscador-form {
+  display: flex !important;
+  align-items: center;
+  margin-left: 10px;
+}
+
 .busqueda {
   width: 250px;
   height: 32px;
   border-radius: 20px;
   border: 1px solid black;
   padding: 0 12px;
-  margin-top: 5px;
+  background-color: white;
+  color: black;
 }
 
 /* MENÚ */

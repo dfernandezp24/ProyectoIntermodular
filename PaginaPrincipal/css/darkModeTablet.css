@@ -1,24 +1,70 @@
 
 /* HEADER */
 .header {
-  padding: 0 20px;
+  display: flex !important;
+  flex-direction: column !important; /* Estructura vertical estricta */
+  align-items: center !important;
+  justify-content: flex-start !important;
+  padding: 20px 10px !important;
+  height: auto !important;
+  min-height: 280px !important;
 }
 
-.logo-link img {
-  height: 70px;
-  width: 70px;
+.logo-link, .logo {
+  display: none !important; /* Ocultamos logo para máxima limpieza en tablet */
 }
 
-
-.busqueda {
-  display: none;
+.izquierda {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  margin-bottom: 15px !important;
+  order: 1 !important;
 }
 
+.nombre-link {
+  display: block !important;
+  width: 100% !important;
+  text-align: center !important;
+}
 
 .nombre {
-  font-size: 48px;
-  line-height: 48px;  
-  margin-right: 20px;
+  font-size: 50px !important;
+  line-height: 50px !important;
+  margin: 0 !important;
+}
+
+.buscador-form {
+  order: 2 !important; /* Ocupa toda la fila 2 */
+  display: flex !important;
+  width: 100% !important;
+  justify-content: center !important;
+  margin-top: 10px !important;
+  margin-bottom: 25px !important;
+}
+
+.busqueda {
+  width: 90% !important;
+  max-width: 400px !important;
+  height: 45px !important;
+  border-radius: 25px;
+  border: 1px solid black;
+  padding: 0 20px;
+  background-color: white !important;
+  color: black !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+.menu {
+  order: 3 !important; /* Ocupa toda la fila 3 */
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  margin-top: 10px !important;
+  height: auto !important;
 }
 
 /* MENÚ */
