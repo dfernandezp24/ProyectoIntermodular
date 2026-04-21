@@ -17,38 +17,38 @@
 
 <header class="header">
   <div class="izquierda">
-    <a href="<?php echo $base_url; ?>/PaginaPrincipal/principal.php" class="logo-link">
-      <img src="<?php echo $base_url; ?>/fotos/logo.jpeg" alt="Logo" class="logo">
+    <a href="<?= $base_url ?>/PaginaPrincipal/principal.php" class="logo-link">
+      <img src="<?= $base_url ?>/fotos/logo.jpeg" alt="Logo" class="logo">
     </a>
-    <a href="<?php echo $base_url; ?>/PaginaPrincipal/principal.php" class="nombre-link">
+    <a href="<?= $base_url ?>/PaginaPrincipal/principal.php" class="nombre-link">
       <h1 class="nombre">Kpop-Wiki</h1>
     </a>
-    <form class="buscador-form" action="<?php echo $base_url; ?>/Artistas/artistasSelector.php" method="GET">
+    <form class="buscador-form" action="<?= $base_url ?>/Artistas/artistasSelector.php" method="GET">
       <input type="text" name="q" class="busqueda" placeholder="Buscar artistas...">
     </form>
   </div>
 
   <nav class="menu">
     <div class="item">
-        <a href="<?php echo $base_url; ?>/PaginaPrincipal/principal.php" class="<?php echo ($current_page == 'inicio') ? 'activo' : ''; ?>">Inicio</a>
+        <a href="<?= $base_url ?>/PaginaPrincipal/principal.php" class="<?= ($current_page == 'inicio') ? 'activo' : '' ?>">Inicio</a>
     </div>
     <div class="item">
-      <a href="<?php echo $base_url; ?>/Comeback/comebackSelector.php" class="<?php echo ($current_page == 'comebacks') ? 'activo' : ''; ?>">Comebacks</a>
+      <a href="<?= $base_url ?>/Comeback/comebackSelector.php" class="<?= ($current_page == 'comebacks') ? 'activo' : '' ?>">Comebacks</a>
       <div class="submenu">
-        <a href="<?php echo $base_url; ?>/Comeback/Recientes/recientes.php">Comebacks recientes</a>
-        <a href="<?php echo $base_url; ?>/Comeback/virales/virales.php">Canciones virales</a>
-        <a href="<?php echo $base_url; ?>/Comeback/Promociones/promociones.php">Promociones</a>
-        <a href="<?php echo $base_url; ?>/Comeback/2025/cb_p1.php">Comebacks 2025</a>
+        <a href="<?= $base_url ?>/Comeback/Recientes/recientes.php">Comebacks recientes</a>
+        <a href="<?= $base_url ?>/Comeback/virales/virales.php">Canciones virales</a>
+        <a href="<?= $base_url ?>/Comeback/Promociones/promociones.php">Promociones</a>
+        <a href="<?= $base_url ?>/Comeback/2025/cb_p1.php">Comebacks 2025</a>
       </div>
     </div>
     <div class="item">
-      <a href="<?php echo $base_url; ?>/Artistas/artistasSelector.php" class="<?php echo ($current_page == 'artistas') ? 'activo' : ''; ?>">Artistas</a>
+      <a href="<?= $base_url ?>/Artistas/artistasSelector.php" class="<?= ($current_page == 'artistas') ? 'activo' : '' ?>">Artistas</a>
       <div class="submenu">
-        <a href="<?php echo $base_url; ?>/Artistas/1Gen/1Gen.php">Primera generación</a>
-        <a href="<?php echo $base_url; ?>/Artistas/2Gen/2Gen.php">Segunda generación</a>
-        <a href="<?php echo $base_url; ?>/Artistas/3Gen/3Gen.php">Tercera generación</a>
-        <a href="<?php echo $base_url; ?>/Artistas/4Gen/4Gen.php">Cuarta generación</a>
-        <a href="<?php echo $base_url; ?>/Artistas/5Gen/5Gen.php">Quinta generación</a>
+        <a href="<?= $base_url ?>/Artistas/1Gen/1Gen.php">Primera generación</a>
+        <a href="<?= $base_url ?>/Artistas/2Gen/2Gen.php">Segunda generación</a>
+        <a href="<?= $base_url ?>/Artistas/3Gen/3Gen.php">Tercera generación</a>
+        <a href="<?= $base_url ?>/Artistas/4Gen/4Gen.php">Cuarta generación</a>
+        <a href="<?= $base_url ?>/Artistas/5Gen/5Gen.php">Quinta generación</a>
       </div>
     </div>
   </nav>
