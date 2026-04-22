@@ -25,7 +25,7 @@
   <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="">
 </div>
 
-<script src="js/app.js"></script>
+<script src="<?= $base_url ?>/PaginaPrincipal/js/app.js"></script>
 </body>
 
 </html>

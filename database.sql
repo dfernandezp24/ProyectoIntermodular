@@ -54,3 +54,28 @@ INSERT INTO comebacks (artist_name, album_name, release_info, image_url, spotify
 ('GIRLSET', 'Little Miss', 'Digital Single · 14-11-2025', '/fotos/recientes/LittleMiss.png', 'https://open.spotify.com/intl-es/album/5ychqszZ89oPl6rBKSkGc6?si=E8XrjQibTficeXX7_2s0tw', 'https://music.apple.com/us/album/little-miss-single/1848461044', 'https://music.youtube.com/playlist?list=OLAK5uy_kNqTFB-Txe3nDm7MZ-pCp6RX9pikUtEJU&si=5A9aiUMSgsiPt51V', 'recientes'),
 ('ITZY', 'TUNNEL VISION', '11th Mini Album · 10-11-2025', '/fotos/recientes/TunnelVision.jfif', 'https://open.spotify.com/intl-es/album/7CD7NdEDOMY5Owl9MEzgRw?si=2Z2q2Ea3R1uhwZuKZkkRUQ', 'https://music.apple.com/us/album/tunnel-vision-ep/1846236584', 'https://music.youtube.com/playlist?list=OLAK5uy_nAwplpKBLvrFvJQUrR89jEkhA6EoNW8SA&si=LIQKw2STi7uODMFD', 'recientes'),
 ('YEONJUN', 'NO LABELS: PART 01', '1st Mini Album · 07-11-2025', '/fotos/recientes/NoLabelsPart01.jfif', 'https://open.spotify.com/intl-es/album/4tv1yPD1RAs8Zg5oOjthNF?si=IOubPBU8Qou68DfkUuWxbw', 'https://music.apple.com/us/album/no-labels-part-01-ep/1846790579', 'https://music.youtube.com/playlist?list=OLAK5uy_n4HvZHp-O-r2-ZkzmDrn4yNUC8pFTtRu4&si=bg-RR91yjaSAogAv', 'recientes');
+
+-- Tabla para promociones de programas musicales
+CREATE TABLE IF NOT EXISTS promociones (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    artist_name VARCHAR(100) NOT NULL,
+    song_name VARCHAR(100) NOT NULL,
+    program_info VARCHAR(100),
+    image_url VARCHAR(255),
+    youtube_url VARCHAR(255)
+);
+
+-- Insertar promociones (Datos de promociones.html y promociones2.html)
+INSERT INTO promociones (artist_name, song_name, program_info, image_url, youtube_url) VALUES
+('NMIXX', 'Blue Valentine', '2025 MBC Music Festival · 31-12-2025', '/fotos/promociones/BlueValentine.jpg', 'https://www.youtube.com/watch?v=L1JNz9uhkJo'),
+('Cortis', 'GO!', 'SBS GayoDaejeon · 25-12-2025', '/fotos/promociones/Go!.jpg', 'https://www.youtube.com/watch?v=BxkG5Np5rFs'),
+('Stray Kids', 'Do It', 'Inkigayo · 23-11-2025', '/fotos/promociones/DoIt.jpg', 'https://www.youtube.com/watch?v=BTvx_xtsC3c'),
+('Aespa', 'Rich Man', 'Show! MusicCore · 06-09-2025', '/fotos/promociones/RichMan.jpg', 'https://www.youtube.com/watch?v=FVtSKrY8hYQ'),
+('IVE', 'XOXZ', 'M COUNTDOWN · 28-08-2025', '/fotos/promociones/xoxz.jpg', 'https://www.youtube.com/watch?v=LqzfG98UeX8'),
+('SEVENTEEN', 'Thunder', '세븐틴 [Music Bank] · 30-05-2025', '/fotos/promociones/Thunder.jpg', 'https://www.youtube.com/watch?v=yXjQe26dxHc'),
+('Fifty Fifty', 'Midnight Special', 'MMT STAGE · 14-05-2025', '/fotos/promociones/MidnightSpecial.jpg', 'https://www.youtube.com/watch?v=MyS_ADgNR7g'),
+('NCT WISH', 'poppop', 'MOVE TO PERFORMANCE · 16-04-2025', '/fotos/promociones/poppop.jpg', 'https://www.youtube.com/watch?v=f8sRbKyPnZE'),
+('TNX', '아 진짜 (For Real?)', 'Just DANCE · 27-03-2025', '/fotos/promociones/ForReal.jpg', 'https://www.youtube.com/watch?v=L9glB-NcxuA'),
+('YOUNG POSSE', 'XXL', '1theKILLPO · 21-03-2025', '/fotos/promociones/XXL.jpg', 'https://www.youtube.com/watch?v=C9UnUV2Q1Zk'),
+('8TURN', 'RU-PUM PUM', 'Relay Dance · 14-01-2025', '/fotos/promociones/RU-PUMPUM.jpg', 'https://www.youtube.com/watch?v=t9hVNwGl18M'),
+('GFRIEND', '우리의 다정한 계절 속에 (Season of Memories)', 'Studio Choom · 07-01-2025', '/fotos/promociones/SeasonOfMemories.jpg', 'https://www.youtube.com/watch?v=VClsKLNQFWQ');

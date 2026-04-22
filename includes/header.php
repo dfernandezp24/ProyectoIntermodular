@@ -4,9 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kpop-Wiki</title>
-  <link id="theme-main" rel="stylesheet" href="css/lightMode.css">
-  <link id="theme-tablet" rel="stylesheet" href="css/lightModeTablet.css" media="screen and (min-width: 601px) and (max-width: 1024px)">
-  <link id="theme-mobile" rel="stylesheet" href="css/lightModeMovil.css" media="(max-width: 600px)">
+  <link id="theme-main" rel="stylesheet" href="<?= $base_url ?>/PaginaPrincipal/css/lightMode.css">
+  <link id="theme-tablet" rel="stylesheet" href="<?= $base_url ?>/PaginaPrincipal/css/lightModeTablet.css" media="screen and (min-width: 601px) and (max-width: 1024px)">
+  <link id="theme-mobile" rel="stylesheet" href="<?= $base_url ?>/PaginaPrincipal/css/lightModeMovil.css" media="(max-width: 600px)">
+  <?php if (isset($extra_css)): ?>
+    <link rel="stylesheet" href="<?= $base_url ?>/<?= $extra_css ?>">
+  <?php endif; ?>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
