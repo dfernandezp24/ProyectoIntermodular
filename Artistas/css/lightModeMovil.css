@@ -46,11 +46,11 @@
 
 
 .submenu {
-  display: none 
+  display: none
 }
 
 .item:hover .submenu {
-  display: none 
+  display: none
 }
 
 /* FOOTER */
@@ -81,24 +81,24 @@
 
 /* ARTISTAS SELECTOR*/
 
- .seleccionador {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 16px;
-    margin: 40px auto 80px auto;
-  }
+.seleccionador {
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 16px;
+  margin: 40px auto 80px auto;
+}
 
-  .seleccionador .card {
-    width: 100%;
-    flex-direction: row; 
-    height: 180px;
-  }
+.seleccionador .card {
+  width: 100%;
+  flex-direction: row;
+  height: 180px;
+}
 
-  .seleccionador .top-left,
-  .seleccionador .top-right,
-  .seleccionador .center,
-  .seleccionador .bottom-left,
-  .seleccionador .bottom-right {
-    grid-column: auto;
-    grid-row: auto;
-  }
+.seleccionador .top-left,
+.seleccionador .top-right,
+.seleccionador .center,
+.seleccionador .bottom-left,
+.seleccionador .bottom-right {
+  grid-column: auto;
+  grid-row: auto;
+}

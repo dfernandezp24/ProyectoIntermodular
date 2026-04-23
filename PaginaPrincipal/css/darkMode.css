@@ -40,7 +40,7 @@ body {
 }
 
 .izquierda {
-  display: flex !important;
+  display: flex;
   align-items: center;
   gap: 20px;
 }
@@ -61,7 +61,7 @@ body {
 }
 
 .buscador-form {
-  display: flex !important;
+  display: flex;
   align-items: center;
   margin-left: 10px;
 }

@@ -1,74 +1,70 @@
-
 /* HEADER */
 .header {
-  display: flex !important;
-  flex-direction: column !important; /* Estructura vertical estricta */
-  align-items: center !important;
-  justify-content: flex-start !important;
-  padding: 20px 10px !important;
-  height: auto !important;
-  min-height: 280px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 10px;
+  height: auto;
+  min-height: 280px;
 }
 
-.logo-link, .logo {
-  display: none !important; /* Ocultamos logo para máxima limpieza en tablet */
+.logo-link,
+.logo {
+  display: none;
 }
 
 .izquierda {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  width: 100% !important;
-  margin-bottom: 15px !important;
-  order: 1 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 15px;
+  order: 1;
 }
 
 .nombre-link {
-  display: block !important;
-  width: 100% !important;
-  text-align: center !important;
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .nombre {
-  font-size: 50px !important;
-  line-height: 50px !important;
-  margin: 0 !important;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 0;
 }
 
 .buscador-form {
-  order: 2 !important; /* Ocupa toda la fila 2 */
-  display: flex !important;
-  width: 100% !important;
-  justify-content: center !important;
-  margin-top: 10px !important;
-  margin-bottom: 25px !important;
+  order: 2;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 25px;
 }
 
 .busqueda {
-  width: 90% !important;
-  max-width: 400px !important;
-  height: 45px !important;
+  width: 90%;
+  max-width: 400px;
+  height: 45px;
   border-radius: 25px;
   border: 1px solid black;
   padding: 0 20px;
-  background-color: white !important;
-  color: black !important;
-  display: block !important;
-  visibility: visible !important;
-}
-
-.menu {
-  order: 3 !important; /* Ocupa toda la fila 3 */
-  width: 100% !important;
-  display: flex !important;
-  justify-content: center !important;
-  margin-top: 10px !important;
-  height: auto !important;
+  background-color: white;
+  color: black;
+  display: block;
+  visibility: visible;
 }
 
 /* MENÚ */
 .menu {
+  order: 3;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
   height: 90px;
 }
 
@@ -132,4 +128,4 @@
 /* VIDEO */
 .video-container {
   padding-top: 360px;
-}
+}

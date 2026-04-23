@@ -30,25 +30,41 @@
 
 ## Estado del Proyecto
 
-> 🚧 **En desarrollo**  
-Actualmente el proyecto cuenta con la estructura principal, el sistema de navegación dinámico, la gestión de banners y la sección de promociones con paginación funcional. Próximamente se completará la migración total de la base de datos de artistas.
+>  **En fase de integración final**  
+Actualmente se ha completado la migración de los módulos principales (Inicio, Comebacks y Promociones) a una arquitectura dinámica basada en PHP y MySQL. Se han estandarizado los estilos responsivos y el sistema de temas. La siguiente fase contempla la finalización del módulo de artistas y la validación final de la base de datos.
 
 ---
 
-## Funciones Principales
+## Estructura del Proyecto
 
-### Características implementadas
+La arquitectura del sitio sigue un modelo modular para facilitar el mantenimiento y la escalabilidad:
 
-- **Gestión Dinámica:** Todo el contenido (banners, videos recomendados, comebacks y promociones) se sirve desde una base de datos MySQL.
-- **Paginación Inteligente:** La sección de promociones carga exactamente 6 elementos por página, optimizando el rendimiento.
-- **Modo Oscuro/Claro:** Sistema de temas persistente mediante JavaScript y CSS dinámico.
-- **Navegación Modular:** Uso de componentes PHP (`header`, `footer`) para una consistencia total en todo el sitio.
+-   **/includes**: Contiene los componentes reutilizables (`header.php`, `footer.php`) y la lógica de conexión a la base de datos (`db.php`).
+-   **/PaginaPrincipal**: Directorio raíz de la interfaz principal con sus propios recursos de CSS, JS e imágenes.
+-   **/Comeback**: Secciones dinámicas para la gestión de lanzamientos, con subcarpetas organizadas por categorías (Recientes, Virales, 2025, Promociones).
+-   **/Artistas**: Módulos para la consulta de información organizada por generaciones.
+-   **/fotos**: Repositorio centralizado de recursos multimedia del sitio.
 
-### Aplicaciones
+## Funciones Implementadas
 
-- Consultar los últimos videos musicales y banners de noticias.
-- Seguir el calendario de promociones en programas como Inkigayo, Music Bank o M Countdown.
-- Explorar artistas organizados por su generación dentro de la industria.
+### Desarrollo Backend y Base de Datos
+-   **Arquitectura Dinámica:** Implementación de consultas PDO para extraer banners, vídeos y fichas de artistas directamente desde MySQL.
+-   **Sistema de Paginación:** Algoritmo en PHP para la segmentación de resultados en la sección de promociones (6 registros por página).
+-   **Normalización de Datos:** Estructura de tablas optimizada para relacionar artistas, comebacks y stages.
+
+### Desarrollo Frontend y UX
+-   **Gestión de Temas (Dark/Light):** Lógica en JavaScript Vanilla que permite el intercambio de hojas de estilo en tiempo real, manteniendo la persistencia mediante `localStorage`.
+-   **Diseño Responsivo:** Uso de Media Queries y Flexbox para garantizar la correcta visualización en smartphones (max-width: 600px) y tablets (max-width: 1024px).
+-   **Optimización de CSS:** Estilos organizados por módulos para evitar redundancia y mejorar los tiempos de carga.
+
+## Aplicaciones de la Plataforma
+
+El sistema está diseñado para cubrir las necesidades informativas de la comunidad fan del K-Pop mediante:
+
+-   **Portal de Novedades:** Visualización dinámica de los lanzamientos más recientes y noticias destacadas mediante banners gestionados desde base de datos.
+-   **Calendario de Promociones:** Seguimiento detallado de las actuaciones en los principales programas musicales coreanos (Inkigayo, Music Bank, etc.).
+-   **Archivo Generacional:** Base de datos histórica que permite explorar la evolución de los grupos y solistas según su generación en la industria.
+
 
 ---
 

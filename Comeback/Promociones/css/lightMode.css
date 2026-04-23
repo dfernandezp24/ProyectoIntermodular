@@ -103,7 +103,7 @@ body {
   flex-direction: column;
   background-color: rgb(163, 140, 210);
   width: 100%;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   z-index: 1001;
 }
 
@@ -168,7 +168,7 @@ body {
 }
 
 .footer-links a:hover {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
@@ -308,7 +308,7 @@ body {
   font-size: 14px;
 }
 
-.paginacion a:not(.activo):hover  {
+.paginacion a:not(.activo):hover {
   background-color: #e0d0ff;
 }
 
