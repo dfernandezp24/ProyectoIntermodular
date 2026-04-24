@@ -1,10 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* HEADER */
+/* CABECERA */
 .header {
   display: flex;
   flex-direction: column;
@@ -41,7 +35,6 @@
   margin-top: 15px;
 }
 
-
 .busqueda {
   width: 90%;
   max-width: 300px;
@@ -51,7 +44,6 @@
   padding: 0 15px;
   background-color: white;
   color: black;
-  display: block;
 }
 
 /* LOGIN */
@@ -92,13 +84,12 @@
   font-size: 20px;
 }
 
-
 .submenu {
-  display: none
+  display: none;
 }
 
 .item:hover .submenu {
-  display: none
+  display: none;
 }
 
 /* FOOTER */
@@ -118,7 +109,6 @@
   justify-content: center;
 }
 
-/* BOTÓN MODO OSCURO */
 .modo-oscuro-btn {
   bottom: 15px;
   right: 15px;
@@ -126,13 +116,30 @@
   font-size: 20px;
 }
 
-/* PROMOCIONES*/
-.promociones {
-  width: 95%;
-  margin: 0 auto 80px auto;
+/* CRÉDITOS LICENCIA */
+.creditos {
+  font-size: 12px;
+  padding: 10px 0;
 }
 
-.promociones-grid {
-  grid-template-columns: 1fr;
-  gap: 20px;
+/* ESTILOS AUTH MOVIL */
+.auth-card {
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  border-radius: 20px;
+  min-height: auto;
+  margin: 20px auto;
+  width: 95%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-header h2 {
+  font-size: 35px;
+}
+
+.auth-form {
+  gap: 15px;
 }

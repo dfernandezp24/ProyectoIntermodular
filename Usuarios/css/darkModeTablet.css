@@ -98,6 +98,13 @@
   display: none;
 }
 
+.modo-oscuro-btn {
+  bottom: 15px;
+  right: 15px;
+  padding: 12px;
+  font-size: 20px;
+}
+
 /* FOOTER */
 .footer {
   flex-direction: column;
@@ -115,21 +122,22 @@
   justify-content: center;
 }
 
-.modo-oscuro-btn {
-  bottom: 15px;
-  right: 15px;
-  padding: 12px;
-  font-size: 20px;
+/* ESTILOS AUTH TABLET DARK */
+.auth-card {
+  background: #1e1e1e;
+  border: 1.5px solid #333;
+  padding: 30px;
+  max-width: 400px;
+  border-radius: 20px;
+  margin: 0 auto;
+  color: white;
 }
 
-/* COMEBAKCS */
-
-.comebacks-recientes {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 0 20px;
+.auth-header {
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-.comeback-card {
-  padding: 12px;
+.auth-header h2 {
+  font-size: 45px;
 }

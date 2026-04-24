@@ -66,6 +66,36 @@ body {
   color: black;
 }
 
+/* LOGIN/PERFIL */
+.header-derecha {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.header-derecha a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.header-derecha a i {
+  font-size: 28px;
+}
+
+.header-derecha a:hover {
+  transform: scale(1.1);
+}
+
+.header-derecha .logout-link {
+  color: #721c24;
+}
+
 /* MENÚ */
 .menu {
   display: flex;
@@ -106,7 +136,7 @@ body {
   flex-direction: column;
   background-color: rgb(163, 140, 210);
   width: 100%;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   z-index: 1001;
 }
 
@@ -169,7 +199,7 @@ body {
 }
 
 .footer-links a:hover {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
@@ -227,15 +257,15 @@ body {
 }
 
 .comeback-card {
-  background-color: #2b2b2b;      
+  background-color: #2b2b2b;
   border-radius: 14px;
   padding: 15px;
   text-align: center;
-  color: #f4f1fb;               
+  color: #f4f1fb;
 }
 
 .comeback-card:hover {
-  box-shadow: 0 10px 20px rgba(255, 235, 59, 0.3); 
+  box-shadow: 0 10px 20px rgba(255, 235, 59, 0.3);
 }
 
 .comeback-card img {
@@ -259,12 +289,12 @@ body {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  color: #f4f1fb;               
+  color: #f4f1fb;
   text-decoration: none;
 }
 
 .comeback-links a:hover {
-  color: #000;                   
+  color: #000;
   background-color: #ffeb3b;
   transform: scale(1.2);
 }

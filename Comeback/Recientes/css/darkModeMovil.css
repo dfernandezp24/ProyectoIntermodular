@@ -54,6 +54,30 @@
   display: block;
 }
 
+/* LOGIN */
+.header-derecha {
+  position: absolute;
+  top: 12px;
+  left: calc(50% + 75px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.header-derecha a {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-derecha a i {
+  font-size: 20px;
+}
+
 /* MENÚ */
 .menu {
   order: 5;

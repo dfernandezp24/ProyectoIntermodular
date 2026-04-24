@@ -1,9 +1,3 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 /* HEADER */
 .header {
   display: flex;
@@ -40,7 +34,6 @@
   order: 10;
   margin-top: 15px;
 }
-
 
 .busqueda {
   width: 90%;
@@ -92,13 +85,12 @@
   font-size: 20px;
 }
 
-
 .submenu {
-  display: none
+  display: none;
 }
 
 .item:hover .submenu {
-  display: none
+  display: none;
 }
 
 /* FOOTER */
@@ -118,7 +110,6 @@
   justify-content: center;
 }
 
-/* BOTÓN MODO OSCURO */
 .modo-oscuro-btn {
   bottom: 15px;
   right: 15px;
@@ -126,13 +117,26 @@
   font-size: 20px;
 }
 
-/* PROMOCIONES*/
-.promociones {
+/* ESTILOS AUTH MOVIL DARK */
+.auth-card {
+  background: #1e1e1e;
+  border: 1.5px solid #333;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  min-height: auto;
+  margin: 20px auto;
   width: 95%;
-  margin: 0 auto 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
 }
 
-.promociones-grid {
-  grid-template-columns: 1fr;
-  gap: 20px;
+.auth-header h2 {
+  font-size: 35px;
+}
+
+.auth-form {
+  gap: 15px;
 }

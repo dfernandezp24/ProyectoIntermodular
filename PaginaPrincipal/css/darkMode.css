@@ -39,17 +39,6 @@ body {
   object-fit: contain;
 }
 
-.izquierda {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.nombre-link {
-  display: flex;
-  align-items: center;
-}
-
 .nombre {
   font-size: 60px;
   line-height: 60px;
@@ -74,6 +63,36 @@ body {
   padding: 0 12px;
   background-color: white;
   color: black;
+}
+
+/* LOGIN/PERFIL */
+.header-derecha {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.header-derecha a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.header-derecha a i {
+  font-size: 28px;
+}
+
+.header-derecha a:hover {
+  transform: scale(1.1);
+}
+
+.header-derecha .logout-link {
+  color: #721c24;
 }
 
 /* MENÚ */
@@ -116,7 +135,7 @@ body {
   flex-direction: column;
   background-color: rgb(163, 140, 210);
   width: 100%;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   z-index: 1001;
 }
 
@@ -161,11 +180,6 @@ body {
   padding: 4px 10px;
 }
 
-.footer-links a:hover {
-  background-color: rgba(0,0,0,0.1);
-  border-radius: 5px;
-}
-
 .footer-icon {
   display: flex;
   justify-content: flex-end;
@@ -186,14 +200,41 @@ body {
 
 .footer-icon a:hover {
   background-color: black;
-  color: rgb(179, 157, 219);
+  color: white;
 }
 
-/* CONTENIDO */
-.contenido {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.creditos {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  background-color: rgb(179, 157, 219);
+  padding: 15px 0;
+  border-top: 2px solid black;
+}
+
+.creditos a {
+  color: white;
+  text-decoration: none;
+}
+
+.creditos img {
+  max-width: 16px;
+  max-height: 16px;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.modo-oscuro-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 24px;
+  color: white;
+  z-index: 1000;
+  cursor: pointer;
 }
 
 /* BANNER */
@@ -205,9 +246,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black; 
+  background-color: black;
 }
-
 
 .slides {
   display: flex;
@@ -232,7 +272,6 @@ body {
   display: block;
 }
 
-/* TEXTO DEL BANNER */
 .overlay-texto {
   position: absolute;
   bottom: 0;
@@ -246,7 +285,6 @@ body {
   z-index: 3;
 }
 
-/* FLECHAS */
 .flecha {
   position: absolute;
   top: 260px;
@@ -264,10 +302,6 @@ body {
   right: 20px;
 }
 
-.flecha:hover{
-  color: #ff4081;
-}
-
 .indicadores {
   position: absolute;
   bottom: 10px;
@@ -278,7 +312,7 @@ body {
   gap: 8px;
 }
 
-.indicadores .punto {
+.punto {
   width: 12px;
   height: 12px;
   background: #555;
@@ -288,7 +322,7 @@ body {
   transition: background 0.3s ease;
 }
 
-.indicadores .punto.active {
+.punto.active {
   background: white;
 }
 
@@ -299,13 +333,12 @@ body {
   text-align: center;
 }
 
-/* VIDEO */
 .video-container {
   width: 100%;
   max-width: 1920px;
   margin: 32px 0;
   position: relative;
-  padding-top: 540px; 
+  padding-top: 540px;
 }
 
 .video-container iframe {
@@ -315,42 +348,4 @@ body {
   width: 100%;
   height: 100%;
   border: none;
-}
-
-.modo-oscuro-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  border-radius: 50%;
-  padding: 15px;
-  font-size: 24px;
-  color: white;
-}
-
-.modo-oscuro-btn:hover {
-  background-color: white;
-  color: black;
-}
-
-/* CRÉDITOS LICENCIA */
-.creditos {
-  font-size: 14px;
-  text-align: center;
-  margin: 0;
-  background-color: rgb(179, 157, 219);
-  padding: 15px 0;
-  border-top: 2px solid black;
-}
-
-.creditos a {
-  color: white;
-  text-decoration: none;
-}
-
-.creditos img {
-  max-width: 16px;
-  max-height: 16px;
-  margin-left: 3px;
-  vertical-align: middle;
 }

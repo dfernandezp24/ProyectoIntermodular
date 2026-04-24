@@ -1,18 +1,13 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* CABECERA */
+/* CABECERA MÓVIL */
 .header {
   display: flex;
   flex-direction: column;
   height: auto;
   padding: 10px 15px;
+  position: relative;
 }
 
-.izquierda {
+.header .izquierda {
   display: contents;
 }
 
@@ -31,6 +26,30 @@
 .nombre {
   font-size: 40px;
   line-height: 40px;
+}
+
+/* LOGIN */
+.header-derecha {
+  position: absolute;
+  top: 12px;
+  left: calc(50% + 75px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.header-derecha a {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-derecha a i {
+  font-size: 20px;
 }
 
 .buscador-form {
@@ -52,9 +71,7 @@
   color: black;
 }
 
-
-
-/* MENÚ */
+/* MENÚ MÓVIL */
 .menu {
   order: 5;
   display: flex;
@@ -68,7 +85,6 @@
   font-size: 20px;
 }
 
-
 .submenu {
   display: none;
 }
@@ -77,7 +93,7 @@
   display: none;
 }
 
-/* FOOTER */
+/* FOOTER MÓVIL */
 .footer {
   flex-direction: column;
   gap: 15px;
@@ -94,45 +110,6 @@
   justify-content: center;
 }
 
-
-.contenido {
-  padding: 0 10px;
-}
-
-/* BANNER */
-.banner {
-  height: 300px;
-}
-
-
-.overlay-texto {
-  font-size: 20px;
-  padding: 10px;
-}
-
-
-.flecha {
-  font-size: 32px;
-  top: 130px;
-}
-
-
-.indicadores .punto {
-  width: 10px;
-  height: 10px;
-  background-color: #ff4081;
-}
-
-
-.titulo-comeback {
-  font-size: 32px;
-}
-
-
-.video-container {
-  padding-top: 200px;
-}
-
 .modo-oscuro-btn {
   bottom: 15px;
   right: 15px;
@@ -144,4 +121,4 @@
 .creditos {
   font-size: 12px;
   padding: 10px 0;
-}
+}

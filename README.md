@@ -31,7 +31,30 @@
 ## Estado del Proyecto
 
 >  **En fase de integración final**  
-Actualmente se ha completado la migración de los módulos principales (Inicio, Comebacks y Promociones) a una arquitectura dinámica basada en PHP y MySQL. Se han estandarizado los estilos responsivos y el sistema de temas. La siguiente fase contempla la finalización del módulo de artistas y la validación final de la base de datos.
+Actualmente se ha completado la migración de los módulos principales (Inicio, Comebacks y Promociones) a una arquitectura dinámica basada en PHP y MySQL. Se han estandarizado los estilos responsivos y el sistema de temas. El proyecto cumple con todos los requisitos técnicos de seguridad y gestión de datos.
+
+## Cumplimiento Técnico (TFC)
+
+Este proyecto ha sido desarrollado siguiendo estrictamente los requisitos técnicos exigidos para el Trabajo de Fin de Curso (TFC), garantizando los siguientes estándares de calidad y seguridad:
+
+### 1. Base de Datos y Entidades
+- **Entidades:** Uso de MariaDB/MySQL con una estructura de tablas normalizada que incluye entidades como `users`, `artists` y `comebacks`.
+- **Relaciones:**
+    - **1:N (Uno a Muchos):** Relación entre Artistas y sus respectivos lanzamientos (Comebacks).
+    - **N:M (Muchos a Muchos):** Implementación de un sistema de favoritos donde múltiples usuarios pueden seguir a múltiples artistas mediante la tabla intermedia `user_favorites`.
+
+### 2. Seguridad y Autenticación
+- **Gestión de Sesiones:** Sistema de autenticación básica implementado con sesiones nativas de PHP para el control de acceso a áreas privadas (Perfil).
+- **Hashing de Contraseñas:** Uso de los algoritmos industriales `password_hash()` para el registro y `password_verify()` para la validación de credenciales.
+- **Protección CSRF:** Todos los formularios críticos (**Login, Registro, Edición de Perfil y Borrado de Favoritos**) integran **Tokens CSRF** únicos por sesión, verificados en el servidor para mitigar ataques de Cross-Site Request Forgery.
+- **Prevención de Inyección SQL:** Blindaje total mediante el uso de **Sentencias Preparadas con PDO** en todas las interacciones con la base de datos que manejan datos de entrada.
+
+### 3. Validación y Control de Errores
+- **Validación de Formularios:** Implementación de validación dual:
+    - **Cliente:** Uso de atributos HTML5 (`required`, `type="email"`, `minlength`).
+    - **Servidor:** Lógica en PHP para el saneamiento de datos (`trim`, `htmlspecialchars`), verificación de duplicados y validación de reglas de negocio.
+- **Privacidad de Trazas:** Configuración centralizada en `db.php` para evitar que errores del sistema o trazas SQL se expongan al usuario final.
+- **Logging Seguro:** Los errores críticos se registran internamente mediante `error_log()` para facilitar el mantenimiento técnico sin comprometer la seguridad.
 
 ---
 
@@ -39,32 +62,27 @@ Actualmente se ha completado la migración de los módulos principales (Inicio, 
 
 La arquitectura del sitio sigue un modelo modular para facilitar el mantenimiento y la escalabilidad:
 
--   **/includes**: Contiene los componentes reutilizables (`header.php`, `footer.php`) y la lógica de conexión a la base de datos (`db.php`).
--   **/PaginaPrincipal**: Directorio raíz de la interfaz principal con sus propios recursos de CSS, JS e imágenes.
--   **/Comeback**: Secciones dinámicas para la gestión de lanzamientos, con subcarpetas organizadas por categorías (Recientes, Virales, 2025, Promociones).
--   **/Artistas**: Módulos para la consulta de información organizada por generaciones.
--   **/fotos**: Repositorio centralizado de recursos multimedia del sitio.
+-   **/includes**: Componentes reutilizables (`header.php`, `footer.php`) y núcleo de seguridad/base de datos (`db.php`).
+-   **/Usuarios**: Módulo de gestión de cuentas (Login, Registro, Perfil, Logout) con lógica de edición y borrado protegida.
+-   **/PaginaPrincipal**: Interfaz de bienvenida y noticias dinámicas.
+-   **/Comeback**: Secciones dinámicas para la gestión de lanzamientos y promociones.
+-   **/Artistas**: Catálogo de información organizado por generaciones.
+-   **/fotos**: Almacén centralizado de recursos multimedia.
 
-## Funciones Implementadas
+---
 
-### Desarrollo Backend y Base de Datos
--   **Arquitectura Dinámica:** Implementación de consultas PDO para extraer banners, vídeos y fichas de artistas directamente desde MySQL.
--   **Sistema de Paginación:** Algoritmo en PHP para la segmentación de resultados en la sección de promociones (6 registros por página).
--   **Normalización de Datos:** Estructura de tablas optimizada para relacionar artistas, comebacks y stages.
+## Funciones Principales
 
-### Desarrollo Frontend y UX
--   **Gestión de Temas (Dark/Light):** Lógica en JavaScript Vanilla que permite el intercambio de hojas de estilo en tiempo real, manteniendo la persistencia mediante `localStorage`.
--   **Diseño Responsivo:** Uso de Media Queries y Flexbox para garantizar la correcta visualización en smartphones (max-width: 600px) y tablets (max-width: 1024px).
--   **Optimización de CSS:** Estilos organizados por módulos para evitar redundancia y mejorar los tiempos de carga.
+###  Gestión de Usuario (CRUD Seguro)
+- **Registro (Alta):** Creación de cuentas con validación de duplicados.
+- **Login:** Autenticación segura con persistencia de sesión.
+- **Perfil (Edición):** Permite al usuario actualizar sus datos personales (Nombre/Email) de forma segura.
+- **Favoritos (Borrado):** Sistema interactivo para gestionar la lista de artistas favoritos con eliminación inmediata.
 
-## Aplicaciones de la Plataforma
-
-El sistema está diseñado para cubrir las necesidades informativas de la comunidad fan del K-Pop mediante:
-
--   **Portal de Novedades:** Visualización dinámica de los lanzamientos más recientes y noticias destacadas mediante banners gestionados desde base de datos.
--   **Calendario de Promociones:** Seguimiento detallado de las actuaciones en los principales programas musicales coreanos (Inkigayo, Music Bank, etc.).
--   **Archivo Generacional:** Base de datos histórica que permite explorar la evolución de los grupos y solistas según su generación en la industria.
-
+###  Dinamismo y Datos
+- **Consultas PDO:** Extracción dinámica de información para todas las secciones del sitio.
+- **Paginación Inteligente:** Sistema de navegación para grandes volúmenes de datos en promociones.
+- **Tematización Dinámica:** Cambio de modo claro/oscuro con persistencia en el navegador.
 
 ---
 
@@ -72,39 +90,29 @@ El sistema está diseñado para cubrir las necesidades informativas de la comuni
 
 Sigue estos pasos para configurar el proyecto en tu entorno local utilizando **XAMPP**:
 
-### 📋 Requisitos Previos
+###  Requisitos Previos
 
 1. Tener instalado [XAMPP](https://www.apachefriends.org/) (versión compatible con PHP 8.x).
 2. Tener habilitados los módulos **Apache** y **MySQL** desde el Panel de Control de XAMPP.
 
-### 🔧 Instalación Paso a Paso
+###  Instalación Paso a Paso
 
 1. **Descarga de archivos:**
-   Descarga este repositorio y coloca la carpeta `tfc` dentro del directorio `htdocs` de tu instalación de XAMPP. La ruta final debería ser similar a:
-   `C:\xampp\htdocs\tfc`
-
+   Coloca la carpeta `tfc` dentro del directorio `htdocs` de XAMPP.
 2. **Configuración de la Base de Datos:**
-   - Abre tu navegador y accede a [http://localhost/phpmyadmin](http://localhost/phpmyadmin).
-   - Crea una nueva base de datos haciendo clic en "Nueva" y asígnale el nombre **`kpop_wiki`**.
-   - Haz clic en la base de datos recién creada y ve a la pestaña **Importar**.
-   - Selecciona el archivo **`database.sql`** ubicado en la raíz del proyecto y haz clic en "Continuar".
-
+   - Crea una base de datos llamada **`kpop_wiki`** en phpMyAdmin.
+   - Importa el archivo **`database.sql`** ubicado en la raíz del proyecto.
 3. **Ejecución del sitio:**
-   Abre tu navegador y accede a la siguiente URL para ver la página principal:
-   > [http://localhost/tfc/PaginaPrincipal/principal.php](http://localhost/tfc/PaginaPrincipal/principal.php)
+   Accede a: [http://localhost/tfc/PaginaPrincipal/principal.php](http://localhost/tfc/PaginaPrincipal/principal.php)
 
 ---
 
 ## Tecnologías Utilizadas
 
-- **Backend:** PHP 8.x (Arquitectura basada en Includes y PDO)
-- **Base de Datos:** MySQL / MariaDB
-- **Frontend:** HTML5, CSS3 (Variables, Grid, Flexbox), JavaScript Vanilla
-- **Diseño:** FontAwesome 6, Google Fonts (Bebas Neue, Noto Serif KR)
-
----
-
-## 🛠️ Herramientas de Diagnóstico
+- **Backend:** PHP 8.x (PDO, Sesiones, CSRF Protection)
+- **Base de Datos:** MySQL / MariaDB (Normalizada, Relaciones 1:N y N:M)
+- **Frontend:** HTML5, CSS3 (Custom Properties, Grid, Flexbox), JavaScript Vanilla
+- **Diseño:** FontAwesome 6, Google Fonts
 
 Si encuentras problemas con la conexión a la base de datos, puedes utilizar el script de comprobación incluido:
 

@@ -1,7 +1,5 @@
 <div id="theme-toggle" class="modo-oscuro-btn"><i id="theme-icon" class="fa-regular fa-moon"></i></div>
 
-
-
 <footer class="footer">
   <div class="footer-links">
     <a href="#">Sobre nosotros</a>
@@ -25,7 +23,9 @@
   <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="">
 </div>
 
-<script src="<?= $base_url ?>/PaginaPrincipal/js/app.js"></script>
+<?php 
+  $js_path = isset($extra_js_local) ? $extra_js_local : 'PaginaPrincipal/js/app.js';
+?>
+<script src="<?= $base_url ?>/<?= $js_path ?>"></script>
 </body>
-
 </html>

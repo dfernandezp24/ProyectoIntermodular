@@ -1,4 +1,4 @@
-/* HEADER */
+/* HEADER TABLET - RESTAURADO Y AJUSTADO */
 .header {
   display: flex;
   flex-direction: column;
@@ -7,6 +7,8 @@
   padding: 20px 10px;
   height: auto;
   min-height: 280px;
+  position: relative;
+  /* Para poder posicionar el login dentro */
 }
 
 .logo-link,
@@ -14,7 +16,7 @@
   display: none;
 }
 
-.izquierda {
+.header .izquierda {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,8 +48,7 @@
 }
 
 .busqueda {
-  width: 90%;
-  max-width: 400px;
+  width: 250px;
   height: 45px;
   border-radius: 25px;
   border: 1px solid black;
@@ -56,6 +57,22 @@
   color: black;
   display: block;
   visibility: visible;
+}
+
+/* LOGIN  */
+.header-derecha {
+  position: absolute;
+  top: 45px;
+  left: calc(50% + 120px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  z-index: 10;
+}
+
+.header-derecha a {
+  font-size: 18px;
 }
 
 /* MENÚ */
@@ -104,28 +121,3 @@
   padding: 12px;
   font-size: 20px;
 }
-
-
-/* BANNER */
-.banner {
-  height: 420px;
-}
-
-.overlay-texto {
-  font-size: 26px;
-}
-
-.flecha {
-  font-size: 40px;
-  top: 190px;
-}
-
-/* COMEBACKS */
-.titulo-comeback {
-  font-size: 40px;
-}
-
-/* VIDEO */
-.video-container {
-  padding-top: 360px;
-}
