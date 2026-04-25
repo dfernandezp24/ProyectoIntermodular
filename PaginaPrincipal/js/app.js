@@ -7,17 +7,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function applyTheme(theme) {
     if (!themeMain || !themeTablet || !themeMobile || !themeIcon) return;
+    const isDark = (theme === 'dark');
 
-    if (theme === 'dark') {
-      themeMain.href = 'css/darkMode.css';
-      themeTablet.href = 'css/darkModeTablet.css';
-      themeMobile.href = 'css/darkModeMovil.css';
+    const updateHref = (element, lightFile, darkFile) => {
+      if (!element) return;
+      const currentHref = element.href;
+      if (isDark) {
+        element.href = currentHref.replace(lightFile, darkFile);
+      } else {
+        element.href = currentHref.replace(darkFile, lightFile);
+      }
+    };
+
+    updateHref(themeMain, 'lightMode.css', 'darkMode.css');
+    updateHref(themeTablet, 'lightModeTablet.css', 'darkModeTablet.css');
+    updateHref(themeMobile, 'lightModeMovil.css', 'darkModeMovil.css');
+
+    if (isDark) {
       themeIcon.classList.remove('fa-moon');
       themeIcon.classList.add('fa-sun');
     } else {
-      themeMain.href = 'css/lightMode.css';
-      themeTablet.href = 'css/lightModeTablet.css';
-      themeMobile.href = 'css/lightModeMovil.css';
       themeIcon.classList.remove('fa-sun');
       themeIcon.classList.add('fa-moon');
     }
@@ -32,7 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', newTheme);
         applyTheme(newTheme);
       } catch (error) {
-        console.error("Error al acceder a localStorage:", error);
         const isDark = themeMain && themeMain.href.includes('darkMode');
         applyTheme(isDark ? 'light' : 'dark');
       }
@@ -42,15 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleButtonPosition() {
     const footer = document.querySelector('.footer');
     if (!themeToggle || !footer) return;
-
     const footerRect = footer.getBoundingClientRect();
     const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
     const buttonMargin = 20;
-
     if (footerRect.top < viewportHeight) {
       const offset = (viewportHeight - footerRect.top) + buttonMargin;
       themeToggle.style.bottom = `${offset}px`;
-      themeToggle.style.position = 'fixed';
     } else {
       themeToggle.style.bottom = `${buttonMargin}px`;
     }
@@ -67,68 +72,36 @@ document.addEventListener('DOMContentLoaded', () => {
     applyTheme('light');
   }
 
-
-  function initBanner() {
-    const banner = document.querySelector('.banner');
-    if (!banner) return;
-
+  const banner = document.querySelector('.banner');
+  if (banner) {
     const slides = banner.querySelector('.slides');
     const slideList = banner.querySelectorAll('.slide');
     const puntos = banner.querySelectorAll('.punto');
-    const flechaIzq = banner.querySelectorAll('.flecha.izquierda');
-    const flechaDer = banner.querySelectorAll('.flecha.derecha');
-
+    const flechas = banner.querySelectorAll('.flecha');
     let currentIndex = 0;
-    let isPaused = false;
     let bannerInterval;
 
     function updateBanner(index) {
       currentIndex = (index + slideList.length) % slideList.length;
       slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-
-      puntos.forEach(p => p.classList.remove('active'));
-      puntos[currentIndex].classList.add('active');
-    }
-
-    function nextSlide() {
-      updateBanner(currentIndex + 1);
-    }
-
-    function prevSlide() {
-      updateBanner(currentIndex - 1);
+      puntos.forEach((p, i) => p.classList.toggle('active', i === currentIndex));
     }
 
     function startAutoPlay() {
       if (bannerInterval) clearInterval(bannerInterval);
-      bannerInterval = setInterval(() => {
-        if (!isPaused) nextSlide();
-      }, 5000);
+      bannerInterval = setInterval(() => updateBanner(currentIndex + 1), 5000);
     }
 
-
-    flechaIzq.forEach(f => f.addEventListener('click', () => {
-      prevSlide();
+    flechas.forEach(f => f.addEventListener('click', () => {
+      updateBanner(currentIndex + (f.classList.contains('izquierda') ? -1 : 1));
       startAutoPlay();
     }));
 
-    flechaDer.forEach(f => f.addEventListener('click', () => {
-      nextSlide();
+    puntos.forEach((p, i) => p.addEventListener('click', () => {
+      updateBanner(i);
       startAutoPlay();
     }));
-
-
-    puntos.forEach(p => p.addEventListener('click', () => {
-      const index = parseInt(p.getAttribute('data-index'));
-      updateBanner(index);
-      startAutoPlay();
-    }));
-
-
-    banner.addEventListener('mouseenter', () => isPaused = true);
-    banner.addEventListener('mouseleave', () => isPaused = false);
 
     startAutoPlay();
   }
-
-  initBanner();
 });

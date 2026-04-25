@@ -5,14 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kpop-Wiki</title>
-  <link id="theme-main" rel="stylesheet" href="<?= $base_url ?>/PaginaPrincipal/css/lightMode.css">
-  <link id="theme-tablet" rel="stylesheet" href="<?= $base_url ?>/PaginaPrincipal/css/lightModeTablet.css"
+  <?php
+  $v = time(); // Versión para evitar caché
+  $main_css = isset($extra_css) ? $extra_css : 'PaginaPrincipal/css/lightMode.css';
+  $tablet_css = isset($extra_css_tablet) ? $extra_css_tablet : 'PaginaPrincipal/css/lightModeTablet.css';
+  $mobile_css = isset($extra_css_mobile) ? $extra_css_mobile : 'PaginaPrincipal/css/lightModeMovil.css';
+
+  $path_main = $base_url . '/' . ltrim($main_css, '/') . '?v=' . $v;
+  $path_tablet = $base_url . '/' . ltrim($tablet_css, '/') . '?v=' . $v;
+  $path_mobile = $base_url . '/' . ltrim($mobile_css, '/') . '?v=' . $v;
+  ?>
+  <link id="theme-main" rel="stylesheet" href="<?= $path_main ?>">
+  <link id="theme-tablet" rel="stylesheet" href="<?= $path_tablet ?>"
     media="screen and (min-width: 601px) and (max-width: 1024px)">
-  <link id="theme-mobile" rel="stylesheet" href="<?= $base_url ?>/PaginaPrincipal/css/lightModeMovil.css"
-    media="(max-width: 600px)">
-  <?php if (isset($extra_css)): ?>
-    <link rel="stylesheet" href="<?= $base_url ?>/<?= $extra_css ?>">
-  <?php endif; ?>
+  <link id="theme-mobile" rel="stylesheet" href="<?= $path_mobile ?>" media="(max-width: 600px)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -33,7 +39,7 @@
       <a href="<?= $base_url ?>/PaginaPrincipal/principal.php" class="nombre-link">
         <h1 class="nombre">Kpop-Wiki</h1>
       </a>
-      <form class="buscador-form" action="<?= $base_url ?>/Artistas/artistasSelector.php" method="GET">
+      <form class="buscador-form" action="<?= $base_url ?>/Artistas/buscar.php" method="GET">
         <input type="text" name="q" class="busqueda" placeholder="Buscar artistas...">
       </form>
     </div>

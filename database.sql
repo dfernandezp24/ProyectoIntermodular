@@ -1,8 +1,8 @@
--- Crear base de datos
+
 CREATE DATABASE IF NOT EXISTS kpop_wiki;
 USE kpop_wiki;
 
--- Tabla para el banner dinámico
+
 CREATE TABLE IF NOT EXISTS banners (
     id INT AUTO_INCREMENT PRIMARY KEY,
     image_url VARCHAR(255) NOT NULL,
@@ -10,14 +10,14 @@ CREATE TABLE IF NOT EXISTS banners (
     order_num INT DEFAULT 0
 );
 
--- Tabla para ajustes dinámicos de la web (como el vídeo recomendado)
+
 CREATE TABLE IF NOT EXISTS site_settings (
     id INT AUTO_INCREMENT PRIMARY KEY,
     setting_key VARCHAR(50) UNIQUE,
     setting_value TEXT
 );
 
--- Insertar los banners actuales
+
 INSERT INTO banners (image_url, caption, order_num) VALUES
 ('/fotos/banner/banner-le-sserafim.jpg', 'Spaghetti el primer single album de Le Sserafim ya está disponible', 1),
 ('/fotos/banner/skzDaesang.jpg', 'Stray Kids recibe el daesang por karma', 2),
@@ -25,13 +25,12 @@ INSERT INTO banners (image_url, caption, order_num) VALUES
 ('/fotos/banner/illitNotCuteAnyMore.jpeg', 'Illit arrasa globalmente en todas las plataformas con su primer single album Not Cute Anymore', 4),
 ('/fotos/banner/kep1WaterBomb.jpeg', 'Kep1er sigue presente en los grandes escenarios de 2025', 5);
 
--- Insertar los ajustes del vídeo recomendado
+
 INSERT INTO site_settings (setting_key, setting_value) VALUES
 ('recommended_video_id', 'a2grcJdfXmY'),
 ('recommended_video_title', 'LE SSERAFIM (르세라핌) "CELEBRATION" OFFICIAL MV'),
 ('recommended_video_heading', 'Comeback recomendado del mes');
 
--- Tabla para todos los comebacks (Recientes, Virales, Mensuales, etc.)
 CREATE TABLE IF NOT EXISTS comebacks (
     id INT AUTO_INCREMENT PRIMARY KEY,
     artist_name VARCHAR(100) NOT NULL,
@@ -50,7 +49,7 @@ CREATE TABLE IF NOT EXISTS comebacks (
     artist_id INT NULL
 );
 
--- Insertar comebacks (Recientes y Mensuales 2025)
+
 INSERT INTO comebacks (id, artist_name, album_name, song_name, release_info, month, year, company, is_hot, image_url, spotify_url, apple_url, youtube_url, category) VALUES 
 (1,'ALLDAY PROJECT','ALLDAY PROJECT','ALLDAY PROJECT','1st Mini Album · 08-12-2025',12,2025,'',0,'/fotos/recientes/alldayproyect.webp','https://open.spotify.com/intl-es/album/2llGDqePFTgjCIxOW1RehG?si=gMiP38ZWQBucA7RHsjk2Qg','https://music.apple.com/us/album/allday-project-ep/1856093326','https://music.youtube.com/playlist?list=OLAK5uy_m3s2YrAhZg77LQ5mAoVtH_Ytk6fssCKbc&si=MY7G8XwHR2JNp30n','recientes'),
 (2,'RESCENE','Lip Bomb','Lip Bomb','3rd Mini Album · 25-11-2025',11,2025,'',0,'/fotos/recientes/lipBomb.jpg','https://open.spotify.com/intl-es/album/3H7MTJVprjcvlvCeQdRe1H','https://music.apple.com/us/album/lip-bomb-ep/1852644693','https://music.youtube.com/playlist?list=OLAK5uy_kZrQiqGr_bgCcTLvKpgOzIebfJRBHdFqU&si=gKCHSEeicAFflL8K','recientes'),
@@ -110,7 +109,7 @@ INSERT INTO comebacks (id, artist_name, album_name, song_name, release_info, mon
 (56,'SAY MY NAME','3RD EP ALBUM','&Our Vibe','29/12/2025',12,2025,'iNKODE',0,'/fotos/2025/Diciembre/&OurVibe.jpg','https://open.spotify.com/intl-es/album/52f4wYBg1SDSaMMwZ5u3OF?si=MtVfAPUQTv6RAhqFYnVr0w','https://music.apple.com/us/album/our-vibe-ep/1861370118','https://music.youtube.com/playlist?list=OLAK5uy_kApCbh2UikWb1bBXrhTDc_dCDo9alRZRg&si=VAUnlBiuTu_ro5Uz','2025');
 
 
--- Tabla para promociones de programas musicales
+
 CREATE TABLE IF NOT EXISTS promociones (
     id INT AUTO_INCREMENT PRIMARY KEY,
     artist_name VARCHAR(100) NOT NULL,
@@ -120,7 +119,6 @@ CREATE TABLE IF NOT EXISTS promociones (
     youtube_url VARCHAR(255)
 );
 
--- Insertar promociones (Datos de promociones.html y promociones2.html)
 INSERT INTO promociones (artist_name, song_name, program_info, image_url, youtube_url) VALUES
 ('NMIXX', 'Blue Valentine', '2025 MBC Music Festival · 31-12-2025', '/fotos/promociones/BlueValentine.jpg', 'https://www.youtube.com/watch?v=L1JNz9uhkJo'),
 ('Cortis', 'GO!', 'SBS GayoDaejeon · 25-12-2025', '/fotos/promociones/Go!.jpg', 'https://www.youtube.com/watch?v=BxkG5Np5rFs'),
@@ -135,11 +133,7 @@ INSERT INTO promociones (artist_name, song_name, program_info, image_url, youtub
 ('8TURN', 'RU-PUM PUM', 'Relay Dance · 14-01-2025', '/fotos/promociones/RU-PUMPUM.jpg', 'https://www.youtube.com/watch?v=t9hVNwGl18M'),
 ('GFRIEND', '우리의 다정한 계절 속에 (Season of Memories)', 'Studio Choom · 07-01-2025', '/fotos/promociones/SeasonOfMemories.jpg', 'https://www.youtube.com/watch?v=VClsKLNQFWQ');
 
--- ==========================================
--- NUEVAS TABLAS PARA EL TFC (USUARIOS Y RELACIONES)
--- ==========================================
 
--- Tabla de Usuarios
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
@@ -149,20 +143,51 @@ CREATE TABLE IF NOT EXISTS users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Insertar usuario administrador inicial (password: admin123)
+
 INSERT INTO users (username, email, password, role) VALUES 
 ('admin', 'admin@kpopwiki.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin');
 
--- Tabla de Artistas (Entidad para relación 1:N y N:M)
+
 CREATE TABLE IF NOT EXISTS artists (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     generation INT,
     description TEXT,
-    image_url VARCHAR(255)
+    image_url VARCHAR(255),
+    spotify_url VARCHAR(255),
+    apple_url VARCHAR(255),
+    youtube_url VARCHAR(255),
+    company VARCHAR(100),
+    wiki_url VARCHAR(255) DEFAULT '#'
 );
 
--- Tabla Intermedia para Favoritos (Relación N:M entre Users y Artists)
+INSERT INTO artists (name, generation, image_url, company, spotify_url, apple_url, youtube_url, wiki_url) VALUES 
+('H.O.T.', 1, '/fotos/1gen/HOT.jpg', 'SM Entertainment', 'https://open.spotify.com/intl-es/artist/5JrfgZAgqAMywJpLpJM0eS', 'https://music.apple.com/us/artist/h-o-t/4691436', 'https://music.youtube.com/channel/UCB0jUx1SVzaPu1QCVho9Ocw', '/Artistas/1Gen/Artistas/HOT.php'),
+('The Light and The Salt', 1, '/fotos/1gen/Ligth&Salt.jpg', 'Beyond Music', 'https://open.spotify.com/intl-es/artist/0jhgI3xU8n2o1W6EOw9dIf', 'https://music.apple.com/us/artist/the-light-and-the-salt/561401202', 'https://music.youtube.com/channel/UCF1CYP5TlTQ059koiH0486w', '#'),
+('Teen Teen Five', 1, '/fotos/1gen/TeenTeenFive.jfif', 'SM Entertainment', 'https://open.spotify.com/intl-es/artist/1eRjQfxyrZdxHhK62Np6nb', 'https://music.apple.com/us/artist/teen-teen-five/879422224', 'https://music.youtube.com/channel/UCkAW9J1fmjeeI_-K13kc54A', '#'),
+('Baby V.O.X.', 1, '/fotos/1gen/BabyVOX.jpg', 'BABY VOX Co.', 'https://open.spotify.com/intl-es/artist/7H5LMtjHqkyH4U8dpLR4lo', 'https://music.apple.com/us/artist/baby-v-o-x/1386666947', 'https://music.youtube.com/channel/UCacV4mzrf3rTYg4WJBJ-iAQ', '#'),
+('Jinusean', 1, '/fotos/1gen/Jinusean.jfif', 'YG Entertainment', 'https://open.spotify.com/intl-es/artist/4WItSECPefckW11qSnZXyv', 'https://music.apple.com/us/album/jinusean/1342475366', 'https://music.youtube.com/channel/UCgX9AAxncWN0z8B_HKtAXvA', '#'),
+('FIN.K.L', 1, '/fotos/1gen/Fin.K.L.jpg', 'DSP Media', 'https://open.spotify.com/intl-es/artist/2aRLyjYp7WPr4EkjkI1gvS', 'https://music.apple.com/us/artist/fin-k-l/1457607690', 'https://music.youtube.com/channel/UCItG6VDI70FR31cjQwXLysQ', '#'),
+('Koyote', 1, '/fotos/1gen/Koyote.jpg', 'JG STAR', 'https://open.spotify.com/intl-es/artist/3Xp2BCax4mS6EgstD0OyZR', 'https://music.apple.com/us/artist/koyote/42387681', 'https://music.youtube.com/channel/UC6crVQ5uz9pzRkvqHF8xvXA', '#'),
+('Dynamic Duo', 1, '/fotos/1gen/dynamicduo.jpg', 'Amoeba Culture', 'https://open.spotify.com/intl-es/artist/4nvFFLtv7ZqoTr83387uK4', 'https://music.apple.com/us/artist/dynamicduo/412564585', 'https://music.youtube.com/channel/UC_AGxNvse-OseHxJ-AYT4FA', '#'),
+('Hyun Jin-young & Wawa', 1, '/fotos/1gen/HyunJin-young.jpg', 'S.M. Entertainment', 'https://open.spotify.com/intl-es/artist/3ZZz9fLzRgFXJnEGVHV3Pn', 'https://music.apple.com/us/artist/hyun-jin-young/345034290', 'https://music.youtube.com/channel/UCFp8jw4bpmNNgcqnwH8uhXw', '#'),
+('ZAM', 1, '/fotos/1gen/ZAM.jpg', 'DSP Media', 'https://open.spotify.com/intl-es/artist/0EGPipNhYWZAKovbdqcvuG', 'https://music.apple.com/us/artist/zam/1419991469', 'https://music.youtube.com/channel/UCMWTvczrmhlb0XUhc0Q309w', '#'),
+('DEUX', 1, '/fotos/1gen/DEUX.jpg', 'WA:ID COMPANY', 'https://open.spotify.com/intl-es/artist/64RfnYDHtR3ZaLdtxAjPDA', 'https://music.apple.com/us/artist/deux/348272665', 'https://music.youtube.com/channel/UCxdjAtOEGsnjvPlgqKbi5jw', '#'),
+('Two Two', 1, '/fotos/1gen/twotwo.jpg', 'RIAK', 'https://open.spotify.com/intl-es/album/5OtwgkGBBV1Fe8IeHOPVyR', 'https://music.apple.com/us/artist/two-two/879415819', 'https://music.youtube.com/channel/UCbucry1wu86u1NBKKMso9-A', '#'),
+('Roo´RA', 1, '/fotos/1gen/roora.jpg', 'World Music Entertainment', 'https://open.spotify.com/intl-es/artist/7bb3cdFh1kkHdopjeJRgca', 'https://music.apple.com/us/artist/roora/335944008', 'https://music.youtube.com/channel/UClrlK9SJaioYAWDcK9g-S_w', '#'),
+('Cool', 1, '/fotos/1gen/cool.jpg', 'Genie Music', 'https://open.spotify.com/intl-es/artist/0w3PsroIezW7uRTNxEJLb9', 'https://music.apple.com/us/artist/cool/683085172', 'https://music.youtube.com/channel/UCYz8SkesOW9PBgo7tr8E9mQ', '#'),
+('DJ DOC', 1, '/fotos/1gen/djcoc.jpg', 'ENT102', 'https://open.spotify.com/intl-es/artist/3kDgt4vVKGTLmtC3FkOwWF', 'https://music.apple.com/us/artist/dj-doc/105750664', 'https://music.youtube.com/channel/UCw08Gv4gLCvrJ1aX3auWS7A', '#'),
+('R.ef', 1, '/fotos/1gen/ref.jpg', 'TEAMEnt', 'https://open.spotify.com/intl-es/artist/7cZr14W0dKCGk0elwfecak', 'https://music.apple.com/us/artist/r-ef/635766380', 'https://music.youtube.com/channel/UC2vwBRDYXD4ZYsZLu_o_06w', '#'),
+('Turbo', 1, '/fotos/1gen/turbo.jpg', 'The Turbo Company', 'https://open.spotify.com/intl-es/artist/3aboSJaljyYlTRXt7pEH0G', 'https://music.apple.com/us/artist/turbo/366849060', 'https://music.youtube.com/channel/UCldxOKMiWjehdybzCNVYm8w', '#'),
+('Idol', 1, '/fotos/1gen/idol.jpg', 'DSP media', 'https://open.spotify.com/intl-es/artist/6JpkAWI44s0IyRdPRObOlt', 'https://music.apple.com/us/artist/idol/1458596230', 'https://music.youtube.com/channel/UCIBTrFHWfJDXpeHuyV337eQ', '#'),
+('S.E.S', 1, '/fotos/1gen/ses.jpg', 'S.M. Entertainment', 'https://open.spotify.com/intl-es/artist/61HUG80Xma4rnXsqfZkzeM', 'https://music.apple.com/us/artist/s-e-s/1060470757', 'https://music.youtube.com/channel/UCxJtGwC62n2UeOzWu996STA', '#'),
+('NRG', 1, '/fotos/1gen/NRG.jpg', 'Music Factory Entertainment', 'https://open.spotify.com/intl-es/artist/7xrfnodwPKuIxS9JuUECaf', 'https://music.apple.com/us/artist/nrg/1567172796', 'https://music.youtube.com/channel/UCfqbhtSqgx-lC4Bz5SIxiww', '#'),
+('SECHSKIES', 1, '/fotos/1gen/SECHSKIES.jpg', 'YG Entertainment', 'https://open.spotify.com/intl-es/artist/6uRyNreOHUvWPNGnKfIo27', 'https://music.apple.com/us/artist/sechskies/1162613479', 'https://music.youtube.com/channel/UCcADqTjMyMol8B8mWm9n6rA', '#'),
+('S#arp', 1, '/fotos/1gen/sharp.jpg', 'World Music Entertainment', 'https://open.spotify.com/intl-es/artist/4IQMpwDgwfxBhZPhiBq3I4', 'https://music.apple.com/us/artist/s-arp/914403355', 'https://music.youtube.com/channel/UCU51DyvAr0EG8btWHUX41Qw', '#'),
+('CB Mass', 1, '/fotos/1gen/cbmass.jpg', 'Stone Music Entertainment', 'https://open.spotify.com/intl-es/artist/1P7AuUYePJ4GJPbEvqgPgL', 'https://music.apple.com/us/artist/cb-mass/337863135', 'https://music.youtube.com/channel/UCGVwyMCJrenwTTpPfwZSCUw', '#'),
+('1TYM', 1, '/fotos/1gen/1tym.jpg', 'YG Entertainment', 'https://open.spotify.com/intl-es/artist/28VNvK7Z3jsX3U9253MzmJ', 'https://music.apple.com/us/artist/1tym/975424381', '', '#');
+
+
 CREATE TABLE IF NOT EXISTS user_favorites (
     user_id INT,
     artist_id INT,

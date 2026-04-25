@@ -23,9 +23,7 @@
   <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="">
 </div>
 
-<?php 
-  $js_path = isset($extra_js_local) ? $extra_js_local : 'PaginaPrincipal/js/app.js';
-?>
-<script src="<?= $base_url ?>/<?= $js_path ?>"></script>
+<script src="<?= $base_url ?>/PaginaPrincipal/js/app.js"></script>
 </body>
+
 </html>

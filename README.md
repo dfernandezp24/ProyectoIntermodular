@@ -31,7 +31,7 @@
 ## Estado del Proyecto
 
 >  **En fase de integración final**  
-Actualmente se ha completado la migración de los módulos principales (Inicio, Comebacks y Promociones) a una arquitectura dinámica basada en PHP y MySQL. Se han estandarizado los estilos responsivos y el sistema de temas. El proyecto cumple con todos los requisitos técnicos de seguridad y gestión de datos.
+Actualmente se ha completado la migración de todos los módulos principales (Inicio, Comebacks, Promociones y Artistas) a una arquitectura dinámica basada en PHP y MySQL. Se han estandarizado los estilos responsivos y el sistema de temas en todo el sitio. El proyecto cumple con todos los requisitos técnicos de seguridad y gestión de datos.
 
 ## Cumplimiento Técnico (TFC)
 
@@ -81,8 +81,9 @@ La arquitectura del sitio sigue un modelo modular para facilitar el mantenimient
 
 ###  Dinamismo y Datos
 - **Consultas PDO:** Extracción dinámica de información para todas las secciones del sitio.
-- **Paginación Inteligente:** Sistema de navegación para grandes volúmenes de datos en promociones.
-- **Tematización Dinámica:** Cambio de modo claro/oscuro con persistencia en el navegador.
+- **Buscador Global:** Sistema de búsqueda de artistas en tiempo real conectado a la base de datos.
+- **Paginación Inteligente:** Sistema de navegación para grandes volúmenes de datos en promociones y artistas.
+- **Tematización Dinámica:** Cambio de modo claro/oscuro con persistencia en el navegador y soporte para rutas dinámicas en subcarpetas.
 
 ---
 

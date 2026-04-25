@@ -1,4 +1,4 @@
-/* HEADER TABLET - RESTAURADO Y AJUSTADO */
+/* HEADER */
 .header {
   display: flex;
   flex-direction: column;
@@ -8,7 +8,6 @@
   height: auto;
   min-height: 280px;
   position: relative;
-  /* Para poder posicionar el login dentro */
 }
 
 .logo-link,
@@ -74,6 +73,7 @@
 .header-derecha a {
   font-size: 18px;
 }
+
 
 /* MENÚ */
 .menu {

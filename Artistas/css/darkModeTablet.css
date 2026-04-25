@@ -1,4 +1,3 @@
-
 /* HEADER */
 .header {
   padding: 0 20px;
@@ -16,8 +15,25 @@
 
 .nombre {
   font-size: 48px;
-  line-height: 48px;  
+  line-height: 48px;
   margin-right: 20px;
+}
+
+/* LOGIN */
+.header-derecha {
+  position: absolute;
+  top: 45px;
+  left: calc(50% + 120px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  z-index: 10;
+}
+
+.header-derecha a {
+  font-size: 18px;
+  color: black;
 }
 
 /* MENÚ */
@@ -48,23 +64,23 @@
 /* ARTISTAS SELECTOR */
 
 .seleccionador {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto;
-    gap: 20px;
-    margin: 60px auto 100px auto;
-  }
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+  margin: 60px auto 100px auto;
+}
 
-  .seleccionador .card {
-    width: 100%;
-    flex-direction: row;
-    height: 180px;
-  }
+.seleccionador .card {
+  width: 100%;
+  flex-direction: row;
+  height: 180px;
+}
 
-  .seleccionador .top-left,
-  .seleccionador .top-right,
-  .seleccionador .center,
-  .seleccionador .bottom-left,
-  .seleccionador .bottom-right {
-    grid-column: auto;
-    grid-row: auto;
-  }
+.seleccionador .top-left,
+.seleccionador .top-right,
+.seleccionador .center,
+.seleccionador .bottom-left,
+.seleccionador .bottom-right {
+  grid-column: auto;
+  grid-row: auto;
+}
