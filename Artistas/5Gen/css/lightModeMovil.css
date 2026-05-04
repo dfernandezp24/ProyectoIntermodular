@@ -4,39 +4,86 @@
   padding: 0;
 }
 
-/* CABECERA */
+/* CABECERA MÓVIL */
 .header {
+  display: flex;
   flex-direction: column;
   height: auto;
   padding: 10px 15px;
+  position: relative;
 }
 
-.izquierda {
-  flex-direction: column;
-  gap: 10px;
+.header .izquierda {
+  display: contents;
 }
-
 
 .logo-link,
-.busqueda {
+.logo {
   display: none;
 }
 
-.titulo-buscador {
-  align-items: center;
+.nombre-link {
+  display: block;
+  text-align: center;
+  width: 100%;
+  order: 1;
 }
 
 .nombre {
   font-size: 40px;
   line-height: 40px;
-  text-align: center;
 }
 
-/* MENÚ */
-.menu {
-  flex-direction: column;
-  height: auto;
+/* LOGIN */
+.header-derecha {
+  position: absolute;
+  top: 12px;
+  left: calc(50% + 75px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10;
+}
+
+.header-derecha a {
+  font-size: 16px;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.header-derecha a i {
+  font-size: 20px;
+}
+
+.buscador-form {
+  display: flex;
   width: 100%;
+  justify-content: center;
+  order: 10;
+  margin-top: 15px;
+}
+
+.busqueda {
+  width: 90%;
+  max-width: 300px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid black;
+  padding: 0 15px;
+  background-color: white;
+  color: black;
+}
+
+/* MENÚ MÓVIL */
+.menu {
+  order: 5;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
 }
 
 .item a {
@@ -46,11 +93,19 @@
 
 
 .submenu {
-  display: none 
+  display: none
 }
 
 .item:hover .submenu {
-  display: none 
+  display: none
+}
+
+.submenu {
+  display: none
+}
+
+.item:hover .submenu {
+  display: none
 }
 
 /* FOOTER */
@@ -89,6 +144,38 @@
 
 .grupo-card {
   padding: 14px;
+  position: relative;
+}
+
+
+.fav-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 20;
+}
+
+.fav-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #444;
+  padding: 0;
+}
+
+.fav-btn.active {
+  color: #ff4d4d;
+}
+
+.fav-btn i {
+  font-size: 18px;
 }
 
 .grupo-info h3 {

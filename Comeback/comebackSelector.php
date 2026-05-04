@@ -1,6 +1,11 @@
 <?php
 require_once '../includes/db.php';
 $current_page = 'comebacks';
+
+$extra_css = 'Comeback/css/lightMode.css';
+$extra_css_tablet = 'Comeback/css/lightModeTablet.css';
+$extra_css_mobile = 'Comeback/css/lightModeMovil.css';
+
 include '../includes/header.php';
 ?>
 
@@ -10,8 +15,8 @@ include '../includes/header.php';
     <div class="card-text">
       <h3>Comebacks recientes</h3>
       <p>Los comebacks más recientes del K-pop,<br>
-         nuevos conceptos, sonidos y visuales.<br>
-         Descubre los últimos lanzamientos en un solo lugar.
+        nuevos conceptos, sonidos y visuales.<br>
+        Descubre los últimos lanzamientos en un solo lugar.
       </p>
     </div>
   </a>
@@ -21,8 +26,8 @@ include '../includes/header.php';
     <div class="card-text">
       <h3>Comebacks virales</h3>
       <p>Los comebacks más virales del K-pop,<br>
-         los que rompieron tendencias y redes.<br>
-         Escenarios, canciones y momentos imposibles de ignorar.
+        los que rompieron tendencias y redes.<br>
+        Escenarios, canciones y momentos imposibles de ignorar.
       </p>
     </div>
   </a>
@@ -32,8 +37,8 @@ include '../includes/header.php';
     <div class="card-text">
       <h3>Comebacks 2025</h3>
       <p>Los comebacks del K-pop a lo largo de 2025,<br>
-         nuevos conceptos, música y visuales del año.<br>
-         Los regresos más destacados reunidos aquí.
+        nuevos conceptos, música y visuales del año.<br>
+        Los regresos más destacados reunidos aquí.
       </p>
     </div>
   </a>
@@ -43,8 +48,8 @@ include '../includes/header.php';
     <div class="card-text">
       <h3>Promociones</h3>
       <p>Actuaciones y promociones en programas musicales,<br>
-         Inkigayo, Music Bank, M Countdown y más.<br>
-         Todos los stages y momentos clave reunidos.
+        Inkigayo, Music Bank, M Countdown y más.<br>
+        Todos los stages y momentos clave reunidos.
       </p>
     </div>
   </a>

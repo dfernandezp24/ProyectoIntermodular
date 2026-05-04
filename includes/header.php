@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kpop-Wiki</title>
   <?php
-  $v = time(); // Versión para evitar caché
+  $v = time();
   $main_css = isset($extra_css) ? $extra_css : 'PaginaPrincipal/css/lightMode.css';
   $tablet_css = isset($extra_css_tablet) ? $extra_css_tablet : 'PaginaPrincipal/css/lightModeTablet.css';
   $mobile_css = isset($extra_css_mobile) ? $extra_css_mobile : 'PaginaPrincipal/css/lightModeMovil.css';
 
-  $path_main = $base_url . '/' . ltrim($main_css, '/') . '?v=' . $v;
-  $path_tablet = $base_url . '/' . ltrim($tablet_css, '/') . '?v=' . $v;
-  $path_mobile = $base_url . '/' . ltrim($mobile_css, '/') . '?v=' . $v;
+  $path_main = rtrim($base_url, '/') . '/' . ltrim($main_css, '/') . '?v=' . $v;
+  $path_tablet = rtrim($base_url, '/') . '/' . ltrim($tablet_css, '/') . '?v=' . $v;
+  $path_mobile = rtrim($base_url, '/') . '/' . ltrim($mobile_css, '/') . '?v=' . $v;
   ?>
   <link id="theme-main" rel="stylesheet" href="<?= $path_main ?>">
   <link id="theme-tablet" rel="stylesheet" href="<?= $path_tablet ?>"
@@ -36,12 +36,18 @@
       <a href="<?= $base_url ?>/PaginaPrincipal/principal.php" class="logo-link">
         <img src="<?= $base_url ?>/fotos/logo.jpeg" alt="Logo" class="logo">
       </a>
-      <a href="<?= $base_url ?>/PaginaPrincipal/principal.php" class="nombre-link">
-        <h1 class="nombre">Kpop-Wiki</h1>
-      </a>
-      <form class="buscador-form" action="<?= $base_url ?>/Artistas/buscar.php" method="GET">
-        <input type="text" name="q" class="busqueda" placeholder="Buscar artistas...">
-      </form>
+      <?php if (isset($extra_css)): ?>
+        <div class="titulo-buscador">
+      <?php endif; ?>
+        <a href="<?= $base_url ?>/PaginaPrincipal/principal.php" class="nombre-link">
+          <h1 class="nombre">Kpop-Wiki</h1>
+        </a>
+        <form class="buscador-form" action="<?= $base_url ?>/Artistas/buscar.php" method="GET">
+          <input type="text" name="q" class="busqueda" placeholder="Buscar artistas...">
+        </form>
+      <?php if (isset($extra_css)): ?>
+        </div>
+      <?php endif; ?>
     </div>
 
     <nav class="menu">

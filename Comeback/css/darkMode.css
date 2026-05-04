@@ -106,7 +106,7 @@ body {
   flex-direction: column;
   background-color: rgb(163, 140, 210);
   width: 100%;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   z-index: 1001;
 }
 
@@ -169,7 +169,7 @@ body {
 }
 
 .footer-links a:hover {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
@@ -221,17 +221,17 @@ body {
 
 .seleccionador {
   display: grid;
-  grid-template-columns: 1fr 360px 1fr; 
-  grid-template-rows: 200px 200px 200px; 
+  grid-template-columns: 1fr 360px 1fr;
+  grid-template-rows: 200px 200px 200px;
   justify-items: center;
   align-items: center;
-  gap: 10px; 
+  gap: 10px;
   margin: 80px auto 120px auto;
 }
 
 .seleccionador .card {
-  background-color: #2b2b2b;       
-  color: #f4f1fb;                 
+  background-color: #2b2b2b;
+  color: #f4f1fb;
   text-decoration: none;
   border-radius: 10px;
   padding: 10px;
@@ -240,13 +240,13 @@ body {
   align-items: center;
   width: 360px;
   height: 180px;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   overflow: hidden;
 }
 
 .seleccionador .card:hover {
-  background-color: #3b3b3b;       
-  box-shadow: 0 10px 30px rgba(255, 235, 59, 0.3); 
+  background-color: #3b3b3b;
+  box-shadow: 0 10px 30px rgba(255, 235, 59, 0.3);
 }
 
 .seleccionador .card img {
@@ -269,7 +269,7 @@ body {
   font-size: 20px;
   margin-bottom: 6px;
   line-height: 1.2;
-  color: #f4f1fb;                 
+  color: #f4f1fb;
 }
 
 .seleccionador .card-text p {
@@ -277,7 +277,7 @@ body {
   font-size: 14px;
   line-height: 1.4;
   word-break: break-word;
-  color: #f4f1fb;                
+  color: #f4f1fb;
 }
 
 /* POSICIONES EN EL GRID */

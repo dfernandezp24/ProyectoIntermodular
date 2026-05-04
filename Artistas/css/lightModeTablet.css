@@ -145,3 +145,23 @@
   grid-column: auto;
   grid-row: auto;
 }
+/* ESTILOS DE GRUPOS Y TARJETAS TABLET */
+.grupos-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin: 60px auto 100px;
+  padding: 0 30px;
+}
+
+.grupo-card {
+  padding: 15px;
+}
+
+.grupo-info h3 {
+  font-size: 23px;
+}
+
+.grupo-info p {
+  font-size: 16px;
+}
+

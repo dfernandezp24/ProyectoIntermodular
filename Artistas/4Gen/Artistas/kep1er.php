@@ -1,55 +1,11 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kpop-Wiki</title>
-  <link id="theme-main" rel="stylesheet" href="css/lightMode.css">
-  <link id="theme-tablet" rel="stylesheet" href="css/lightModeTablet.css" media="(min-width: 601px) and (max-width: 1024px)">
-  <link id="theme-mobile" rel="stylesheet" href="css/lightModeMovil.css" media="(max-width: 600px)">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/bb7eda0c53.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header class="header">
-  <div class="izquierda">
-    <a href="/PaginaPrincipal/principal.html" class="logo-link">
-      <img src="/fotos/logo.jpeg" alt="Logo" class="logo">
-    </a>
-    <form class="titulo-buscador">
-      <a href="/PaginaPrincipal/principal.html" class="nombre-link">
-        <h1 class="nombre">Kpop-Wiki</h1>
-      </a>
-      <input type="text" class="busqueda" placeholder="Buscar...">
-    </form>
-  </div>
-
-  <nav class="menu">
-    <div class="item"><a href="/PaginaPrincipal/principal.html">Inicio</a></div>
-    <div class="item">
-      <a href="/Comeback/comebackSelector.html">Comebacks</a>
-      <div class="submenu">
-        <a href="/Comeback/Recientes/recientes.html">Comebacks recientes</a>
-        <a href="/Comeback/virales/virales.html">Canciones virales</a>
-        <a href="/Comeback/Promociones/promociones.html">Promociones</a>
-        <a href="/Comeback/2025/cb_p1.html">Comebacks 2025</a>
-      </div>
-    </div>
-    <div class="item">
-      <a href="/Artistas/artistasSelector.html" class="activo">Artistas</a>
-      <div class="submenu">
-        <a href="/Artistas/1Gen/1Gen.html">Primera generación</a>
-        <a href="/Artistas/2Gen/2gen.html">Segunda generación</a>
-        <a href="/Artistas/3Gen/3Gen.html">Tercera generación</a>
-        <a href="/Artistas/4Gen/4Gen.html">Cuarta generación</a>
-        <a href="/Artistas/5Gen/5Gen.html">Quinta generación</a>
-      </div>
-    </div>
-  </nav>
-</header>
+<?php
+require_once '../../../includes/db.php';
+$current_page = 'artistas';
+$extra_css = 'Artistas/4Gen/Artistas/css/lightMode.css';
+$extra_css_tablet = 'Artistas/4Gen/Artistas/css/lightModeTablet.css';
+$extra_css_mobile = 'Artistas/4Gen/Artistas/css/lightModeMovil.css';
+include '../../../includes/header.php';
+?>
 
 <div class="wiki-page">
 
@@ -89,7 +45,7 @@
     </nav>
 
     <aside class="wiki-info">
-      <img src="/fotos/Artistas/4Gen/ke1per.jpg" alt="Ke1per foto del grupo">
+      <img src="<?= $base_url ?>/fotos/Artistas/4Gen/kep1er.jpg" alt="Kep1er foto del grupo">
       <h2>Información del Grupo</h2>
       <ul>
         <li>Nombre:Kep1er (Internacional), 케플러  (Corea), ケプラー (Japón), 开普勒 (chino)</li>
@@ -131,7 +87,7 @@
         El 05 de diciembre, Wakeone Entertainment y Swing Entertainment dieron un comunicado anunciando que el debut del grupo se atrasaría después de que un miembro del personal diera positivo a COVID-19. Lo que además imposibilitó al grupo a presentarse en los Mnet Asian Music Awards 2021 el día 11 de diciembre como se tenía planeado. <br><br>
         El 08 de diciembre, através de su Fan Cafe oficial, dieron a conocer la nueva fecha para el debut del grupo, el cual sería el 03 de enero de 2022. <br>
         El 14 de diciembre, Wakeone Entertainment y Swing Entertainment dieron otro comunicado anunciando que Xiao Ting y Mashiro habían sido diagnosticadas con COVID-19 asintomático, mientras que las otras siete miembros dieron negativo a la prueba al igual que el demás personal involucrado. Toda actividad programada fue cancelada con el fin de cumplir los requerimientos necesarios para la pronta recuperación de ambas integrantes. <br><br>
-        El 25 de diciembre, Wakeone Entertainment y Swing Entertainment dieron un tercer comunicado respecto a la situación por la que estaba pasando el grupo, en este confirmaban que Xiao Ting y Mashiro se habían recuperado completamente del COVID-19 y terminaron su cuarentena acatando a las autoridades de salud públicas. Finalmente el grupo retomaría las actividades en el horario ya programado y continuaría su agenda con normalidad. Este mismo día se reveló el cronograma para el estreno de los teasers restantes. <br><br>
+        El 25 de diciembre, Wakeone Entertainment y Swing Entertainment dieron un tercer comunicado respecto a la situación por la que estaba pasando el grupo, en este confirmaban que Xiao Ting y Mashiro se habían recuperado completamente del COVID-19 y terminaron su cuarentena acatando a las autoridades de salud públicas. Finalmente el grupo retomarías las actividades en el horario ya programado y continuaría su agenda con normalidad. Este mismo día se reveló el cronograma para el estreno de los teasers restantes. <br><br>
         Del 27 de diciembre al 02 de enero, se lanzaron los últimos spoilers para el debut, los cuales contaban con un connection film, el track list del álbum, highlight medley y dos teasers para el M/V. <br>
         El 03 de enero, Kep1er hizo su debut con su primer mini álbum "FIRST IMPACT" junto con el video musical de la canción principal titulada "WA DA DA".
       </p>
@@ -214,7 +170,7 @@
         El 25 de junio, se anunció que Kep1er regresaría en agosto. <br><br>
         El 14 de julio, se anunció que Youngeun tomaría una pausa por razones de salud. <br><br>
         El 1 de agosto, Apple TV+ Press reveló que el grupo participará en su reality show, KPOPPED, que se emitirá el 29 de agosto. <br><br>
-        On August 4, Kep1er released a teaser for their seventh mini album Bubble Gum, set for release on August 19.
+        El 4 de agosto, Kep1er lanzó un teaser para su séptimo mini álbum Bubble Gum, listo para su lanzamiento el 19 de agosto.
       </p>
 
     </section>
@@ -396,35 +352,4 @@
 
 </div>
 
-  <a href="#" id="theme-toggle" class="modo-oscuro-btn"><i id="theme-icon" class="fa-regular fa-moon"></i></a>
-
-<footer class="footer">
-  <div class="footer-links">
-    <a href="#">Sobre nosotros</a>
-    <a href="#">Contacto</a>
-    <a href="#">Términos de uso</a>
-  </div>
-
-  <div class="footer-icon">
-    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#"><i class="fa-brands fa-discord"></i></a>
-  </div>
-</footer>
-
-<div class="creditos">
-  <a href="https://www.kpop-wiki.com">Kpop-Wiki</a> © 2026 by
-  <a href="https://example.com">David Fernández</a> is licensed under
-  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
-  <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="">
-  <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="">
-  <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="">
-  <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="">
-</div>
-
-  <script src="js/app.js"></script>
-</body>
-</html>
-
-
-
+<?php include '../../../includes/footer.php'; ?>

@@ -64,6 +64,36 @@ body {
   margin-top: 5px;
 }
 
+/* LOGIN/PERFIL */
+.header-derecha {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.header-derecha a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.header-derecha a i {
+  font-size: 28px;
+}
+
+.header-derecha a:hover {
+  transform: scale(1.1);
+}
+
+.header-derecha .logout-link {
+  color: #721c24;
+}
+
 /* MENÚ */
 .menu {
   display: flex;
@@ -103,7 +133,7 @@ body {
   flex-direction: column;
   background-color: rgb(163, 140, 210);
   width: 100%;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   z-index: 1001;
 }
 
@@ -141,6 +171,8 @@ body {
   transform: scale(1.1);
 }
 
+
+
 /* FOOTER */
 .footer {
   font-family: 'Noto Serif KR', serif;
@@ -168,7 +200,7 @@ body {
 }
 
 .footer-links a:hover {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
@@ -218,7 +250,7 @@ body {
 
 /* SEGUNDA GENERACION */
 
-.grupos h2{
+.grupos h2 {
   text-align: center;
   margin: 20px auto 20px;
 }
@@ -238,11 +270,13 @@ body {
   border-radius: 14px;
   padding: 15px;
   text-align: center;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .grupo-card:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
 }
 
 
@@ -327,4 +361,44 @@ body {
 .paginacion .activo {
   background-color: black;
   color: white;
+}
+
+/* ESTILOS DEL CORAZÓN (FAVORITOS) */
+.fav-container {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 20;
+}
+
+.fav-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #444;
+  padding: 0;
+  outline: none;
+}
+
+.fav-btn:hover {
+  transform: scale(1.2);
+  background: white;
+  color: #ff4d4d;
+}
+
+.fav-btn.active {
+  color: #ff4d4d;
+}
+
+.fav-btn i {
+  font-size: 20px;
+  line-height: 1;
 }

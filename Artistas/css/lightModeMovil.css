@@ -141,3 +141,23 @@
   grid-column: auto;
   grid-row: auto;
 }
+/* ESTILOS DE GRUPOS Y TARJETAS MÓVIL */
+.grupos-grid {
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+.grupo-card {
+  padding: 14px;
+}
+
+.grupo-info h3 {
+  font-size: 22px;
+}
+
+.grupo-info p {
+  font-size: 15px;
+}
+

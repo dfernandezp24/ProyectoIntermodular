@@ -1,55 +1,11 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kpop-Wiki</title>
-  <link id="theme-main" rel="stylesheet" href="css/lightMode.css">
-  <link id="theme-tablet" rel="stylesheet" href="css/lightModeTablet.css" media="(min-width: 601px) and (max-width: 1024px)">
-  <link id="theme-mobile" rel="stylesheet" href="css/lightModeMovil.css" media="(max-width: 600px)">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/bb7eda0c53.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <header class="header">
-  <div class="izquierda">
-    <a href="/PaginaPrincipal/principal.html" class="logo-link">
-      <img src="/fotos/logo.jpeg" alt="Logo" class="logo">
-    </a>
-    <form class="titulo-buscador">
-      <a href="/PaginaPrincipal/principal.html" class="nombre-link">
-        <h1 class="nombre">Kpop-Wiki</h1>
-      </a>
-      <input type="text" class="busqueda" placeholder="Buscar...">
-    </form>
-  </div>
-
-  <nav class="menu">
-    <div class="item"><a href="/PaginaPrincipal/principal.html">Inicio</a></div>
-    <div class="item">
-      <a href="/Comeback/comebackSelector.html">Comebacks</a>
-      <div class="submenu">
-        <a href="/Comeback/Recientes/recientes.html">Comebacks recientes</a>
-        <a href="/Comeback/virales/virales.html">Canciones virales</a>
-        <a href="/Comeback/Promociones/promociones.html">Promociones</a>
-        <a href="/Comeback/2025/cb_p1.html">Comebacks 2025</a>
-      </div>
-    </div>
-    <div class="item">
-      <a href="/Artistas/artistasSelector.html" class="activo">Artistas</a>
-      <div class="submenu">
-        <a href="/Artistas/1Gen/1Gen.html">Primera generación</a>
-        <a href="/Artistas/2Gen/2gen.html">Segunda generación</a>
-        <a href="/Artistas/3Gen/3Gen.html">Tercera generación</a>
-        <a href="/Artistas/4Gen/4Gen.html">Cuarta generación</a>
-        <a href="/Artistas/5Gen/5Gen.html">Quinta generación</a>
-      </div>
-    </div>
-  </nav>
-</header>
+<?php
+require_once '../../../includes/db.php';
+$current_page = 'artistas';
+$extra_css = 'Artistas/3Gen/Artistas/css/lightMode.css';
+$extra_css_tablet = 'Artistas/3Gen/Artistas/css/lightModeTablet.css';
+$extra_css_mobile = 'Artistas/3Gen/Artistas/css/lightModeMovil.css';
+include '../../../includes/header.php';
+?>
 
 <div class="wiki-page">
 
@@ -120,7 +76,7 @@
     </nav>
 
     <aside class="wiki-info">
-      <img src="/fotos/Artistas/3Gen/Twice.jpg" alt="Twice foto del grupo">
+      <img src="<?= $base_url ?>/fotos/Artistas/3Gen/Twice.jpg" alt="Twice foto del grupo">
       <h2>Información del Grupo</h2>
       <ul>
         <li>Nombre: Twice (Internacional), 트와이스 (Corea), トワイス (Japón), 魏斯劑 (China)</li>
@@ -278,7 +234,7 @@
         El 18 de junio a la medianoche, TWICE liberó una foto teaser que muestra un cielo nocturno lleno de estrellas y una escritura clara que dice: "Dance The Night Away". En el teaser también se revela que "Dance The Night Away" se lanzará el 9 de julio, siendo este su primer comeback coreano de verano. <br><br>
         El 28 de junio a la medianoche, TWICE reveló parte de la lista de canciones de su segundo álbum especial "Summer Nights", el álbum estará formado por nueve canciones, incluyendo seis de su último mini álbum “What is Love?”. La canción principal se titula "Dance the Night Away". <br><br>
         El 29 de junio a la medianoche, TWICE revelo por completo la lista de canciones de su nuevo álbum, las ultimas canciones reveladas son “Chillax” y “Shot thru the heart” que fue co-escrita por las integrantes Momo, Sana y Mina. <br>
-        El 2 de julio a la medianoche, JYP Entertainment revelo un video teaser para "Dance the Night Away", el breve video muestra a las integrantes despertando en una playa mostrando que al final están en una isla desierta. <br>
+        El 2 de julio a la medianoche, JYP Entertainment revelo un video teaser for "Dance the Night Away", el breve video muestra a las integrantes despertando en una playa mostrando que al final están en una isla desierta. <br>
         El 5 de julio, JYP Entertainment reveló otro video teaser de "Dance The Night Away", esta vez muestra a las chicas mostrando parte de la coreografía de la canción. <br>
         El 9 de julio a las 6 p.m. KST, el grupo femenino lanzó un álbum especial de verano titulado “Summer Nights” junto al vídeo musical de su tema promocional. “Dance the Night Away” es un tema up-tempo pop que expresa la juventud y felicidad de las miembros. La canción está llena de alegre energía, adecuada a TWICE, y aleja el calor del verano con un ambiente refrescante. La letra ha sido escrita por el cantante Wheesung, creador de letras de canciones de Orange Caramel, “Heaven” de Ailee o “I Go Crazy Because of You” de T-ara, entre otras. <br><br>
         A las 8PM KST, solo dos horas luego de su lanzamiento, la canción principal “Dance the Night Away” tomó el primer lugar en las listas a tiempo real de los seis sitios de música más importantes, Melon, Genie, Bugs, Mnet, Naver y Soribada.
@@ -305,7 +261,7 @@
         El 03 de Diciembre compartieron fotos teaser grupales para su álbum especial. <br>
         El 04 de Diciembre TWICE reveló sus primeras imágenes teaser individuales para su regreso con el álbum especial "The year of Yes". Los avances incluyen a Na Yeon, Jeong Yeon y Momo. El 05 de DIciembre reveló más imágenes teaser de Sana, Ji Hyo y Mina para el próximo álbum especial. El 06 de Diciembre TWICE reveló imágenes teaser de Da Hyun, Chae Young y Tzuyu. <br><br>
         El 10 de Diciembre TWICE lanzó una nueva vista previa de su próxima canción principal "The Best Thing I Ever Did". <br>
-        El 08 y 09 de Diciembre lanzaron MVs teasers para su regreso con su álbum especial con "The Best Thing I Ever Did". <br>
+        El 08 y 09 de Diciembre lanzaron MVs teasers for su regreso con su álbum especial con "The Best Thing I Ever Did". <br>
         El 12 de Diciembre, TWICE lanzó su tercer álbum especial "The year of Yes" junto con el video musical de su canción principal "The Best Thing I Ever Did". <br>
         "The Best Thing I Ever Did" es una canción alternativa de R&B y pop con un sonido fuerte y maravilloso. Las letras hablan de mirar hacia atrás el año pasado y elegir la reunión con un ser querido como el recuerdo más preciado. <br><br>
         El álbum especial de TWICE "The Year of YES" hizo un fuerte debut en las listas semanales. La canción principal del álbum "The Best Thing I Ever Did".​​​​​​ debutó en el n.°1 en la lista social, mientras que el álbum en sí entró en el n.°2 en la lista de álbumes físicos semanales. 
@@ -474,7 +430,7 @@
         El 13 y 15 de noviembre es revelado fotos conceptuales de las miembros individual y grupalmente. <br>
         El 22 de noviembre, TWICE participó en una actuación premiere de Amazon Prime en donde presentaron varias de sus canciones populares, junto a un adelanto de la coreografía de "STRATEGY". Ese mismo día es revelado la lista de canciones del mini-álbum. <br><br>
         El 29 de noviembre es revelado videos cortos de las canciones del mini-álbum. Dahyun es acreditada en la canción "Keeper". <br>
-        El 1 de diciembre es revelado el primer video teaser de su canción "Strategy (feat. Megan Thee Stallion)" y el 2 diciembre el segundo video teaser. <br>
+        El 1 de diciembre es revelado el primer video teaser de su canción "Strategy (feat. Megan Thee Stallion)" and el 2 diciembre el segundo video teaser. <br>
         El 6 de diciembre es lanzado oficialmente el mini-álbum junto al video musical. <br>
         El 16 de diciembre es lanzado una canción en japonés por nombre "The wish". Y el 18 de diciembre un mini álbum especial con la primera versión de "STRATEGY" junto a algunos remixes y su instrumental.
       </p>
@@ -798,443 +754,11 @@
         <li>Sweetest Obsession</li>
         <li>Keeper</li>
         <li>Magical</li>
-        <li>Strategy</li>
       </ul>
-
-      <h3>THIS IS FOR</h3>
-      <ul>
-        <li>FOUR</li>
-        <li>THIS IS FOR</li>
-        <li>OPTIONS</li>
-        <li>MARS</li>
-        <li>RIGHT HAND GIRL</li>
-        <li>PEACH GELATO</li>
-        <li>HI HELLO</li>
-        <li>BATTITUDE (NAYEON, JEONGYEON, MOMO, MINA)</li>
-        <li>DAT AAH DAT OOH (SANA, JIHYO, DAHYUN, CHAEYOUNG, TZUYU)</li>
-        <li>LET LOVE GO (JEONGYEON, MOMO, SANA, TZUYU)</li>
-        <li>G.O.A.T (MINA, DAHYUN, CHAEYOUNG)</li>
-        <li>TALK (NAYEON, JIHYO)</li>
-        <li>SEESAW</li>
-      </ul>
-
-      <h3>THIS IS FOR DELUXE</h3>
-      <ul>
-        <li>FOUR</li>
-        <li>THIS IS FOR</li>
-        <li>OPTIONS</li>
-        <li>MARS</li>
-        <li>RIGHT HAND GIRL</li>
-        <li>PEACH GELATO</li>
-        <li>HI HELLO</li>
-        <li>BATTITUDE (NAYEON, JEONGYEON, MOMO, MINA)</li>
-        <li>DAT AAH DAT OOH (SANA, JIHYO, DAHYUN, CHAEYOUNG, TZUYU)</li>
-        <li>LET LOVE GO (JEONGYEON, MOMO, SANA, TZUYU)</li>
-        <li>G.O.A.T (MINA, DAHYUN, CHAEYOUNG)</li>
-        <li>TALK (NAYEON, JIHYO)</li>
-        <li>SEESAW</li>
-        <li>HEARTBREAK AVENUE</li>
-        <li>THIS IS FOR (Extended)</li>
-        <li>TAKEDOWN (JEONGYEON, JIHYO, CHAEYOUNG) (Kpop Demon Hunters)</li>
-      </ul>
-
-      <h3>TEN: The Story Goes On</h3>
-      <ul>
-        <li>ME+YOU</li>
-        <li>MEEEEEE (NAYEON)</li>
-        <li>FIX A DRINK (JEONGYEON)</li>
-        <li>MOVE LIKE THAT (MOMO)</li>
-        <li>DECAFFEINATED (SANA)</li>
-        <li>ATM (JIHYO)</li>
-        <li>STONE COLD (MINA)</li>
-        <li>CHESS (DAHYUN)</li>
-        <li>IN MY ROOM (CHAEYOUNG)</li>
-        <li>DIVE IN (TZUYU)</li>
-      </ul>
-
-      <h2 id="Japon">Japón</h2>
-      <h3>#TWICE</h3>
-      <ul>
-        <li>Like Ooh-Ahh (Japanese Ver.)</li>
-        <li>Cheer Up (Japanese Ver.)</li>
-        <li>TT (Japanese Ver.)</li>
-        <li>Knock Knock (Japanese Ver.)</li>
-        <li>Signal (Japanese Ver.)</li>
-        <li>Like Ooh-Ahh (Exclusivo en CD)</li>
-        <li>Cheer Up (Exclusivo en CD)</li>
-        <li>TT (Exclusivo en CD)</li>
-        <li>Knock Knock (Exclusivo en CD)</li>
-        <li>Signal (Exclusivo en CD)</li>
-      </ul>
-      <h3>One More Time</h3>
-      <ul>
-        <li>One More Time</li>
-        <li>Luv Me</li>
-        <li>One More Time (Instrumental)</li>
-        <li>Luv Me (Instrumental)</li>
-      </ul>
-
-      <h3>Candy Pop</h3>
-      <ul>
-        <li>Candy Pop</li>
-        <li>Brand New Girl</li>
-        <li>Candy Pop (Instrumental)</li>
-        <li>Brand New Girl (Instrumental)</li>
-      </ul>
-
-      <h3>Wake Me Up</h3>
-      <ul>
-        <li>Wake Me Up</li>
-        <li>Pink Lemonade</li>
-        <li>Wake Me Up (Instrumental)</li>
-        <li>Pink Lemonade (Instrumental)</li>
-      </ul>
-
-      <h3>I Want You Back</h3>
-      <ul>
-        <li>I Want You Back</li>
-      </ul>
-
-      <h3>BDZ</h3>
-      <ul>
-        <li>BDZ</li>
-        <li>One More Time</li>
-        <li>Candy Pop</li>
-        <li>L.O.V.E.</li>
-        <li>Wishing</li>
-        <li>Say It Again</li>
-        <li>Wake Me Up</li>
-        <li>Brand New Girl</li>
-        <li>Be as ONE</li>
-        <li>I Want You Back</li>
-      </ul>
-
-      <h3>Stay By My Side</h3>
-      <ul>
-        <li>Stay By My Side</li>
-      </ul>
-
-      <h3>BDZ -Repackage-</h3>
-      <ul>
-        <li>Stay By My Side</li>
-        <li>BDZ</li>
-        <li>One More Time</li>
-        <li>Candy Pop</li>
-        <li>L.O.V.E.</li>
-        <li>Wishing</li>
-        <li>Say It Again</li>
-        <li>Wake Me Up</li>
-        <li>Brand New Girl</li>
-        <li>Be as ONE</li>
-        <li>I Want You Back</li>
-      </ul>
-
-      <h3>#TWICE2</h3>
-      <ul>
-        <li>Likey (Japanese Ver.)</li>
-        <li>Heart Shaker (Japanese Ver.)</li>
-        <li>What Is Love? (Japanese Ver.)</li>
-        <li>Dance the Night Away (Japanese Ver.)</li>
-        <li>Yes or Yes (Japanese Ver.)</li>
-        <li>Likey (Exclusivo en CD)</li>
-        <li>Heart Shaker (Exclusivo en CD)</li>
-        <li>What Is Love? (Exclusivo en CD)</li>
-        <li>Dance the Night Away (Exclusivo en CD)</li>
-        <li>Yes or Yes (Exclusivo en CD)</li>
-      </ul>
-
-      <h3>Happy Happy</h3>
-      <ul>
-        <li>Happy Happy</li>
-        <li>The Best Thing I Ever Did (Japanese Ver.)</li>
-        <li>Happy Happy (Collapsedone Remix)</li>
-        <li>Happy Happy (Instrumental)</li>
-      </ul>
-
-      <h3>Breakthrough</h3>
-      <ul>
-        <li>Breakthrough</li>
-        <li>Fancy (Japanese Ver.)</li>
-        <li>Breakthrough (Taalthechoi Remix)</li>
-        <li>Breakthrough (Instrumental)</li>
-      </ul>
-
-      <h3>&TWICE</h3>
-      <ul>
-        <li>Fake & True</li>
-        <li>Stronger</li>
-        <li>Breakthrough</li>
-        <li>Changing!</li>
-        <li>Happy Happy</li>
-        <li>What You Waiting For</li>
-        <li>Be OK</li>
-        <li>POLISH</li>
-        <li>How u doin</li>
-        <li>The Reason Why</li>
-      </ul>
-
-      <h3>&TWICE -Repackage-</h3>
-      <ul>
-        <li>Swing</li>
-        <li>Fake & True</li>
-        <li>Stronger</li>
-        <li>Breakthrough</li>
-        <li>Changing!</li>
-        <li>Happy Happy</li>
-        <li>What You Waiting For</li> 
-        <li>Be OK</li>
-        <li>POLISH</li>
-        <li>How u doin</li>
-        <li>The Reason Why</li>
-      </ul>
-
-      <h3>Fanfare</h3>
-      <ul>
-        <li>Fanfare</li>
-        <li>More & More (Japanese Ver.)</li>
-        <li>Fanfare (Lee Hae Sol Remix)</li>
-        <li>Fanfare (Instrumental)</li>
-      </ul>
-
-      <h3>#TWICE3</h3>
-      <ul>
-        <li>The Best Thing I Ever Did (Japanese Ver.)</li>
-        <li>Fancy (Japanese Ver.)</li>
-        <li>Feel Special (Japanese Ver.)</li>
-        <li>More & More (Japanese Ver.)</li>
-        <li>Stuck In My Head (Japanese Ver.)</li>
-        <li>21:29 (Japanese Ver.)</li>
-        <li>The Best Thing I Ever Did (Exclusivo en CD)</li>
-        <li>Fancy (Exclusivo en CD)</li>
-        <li>Feel Special (Exclusivo en CD)</li>
-        <li>More & More (Exclusivo en CD)</li>
-        <li>Stuck In My Head (Exclusivo en CD)</li>
-        <li>21:29 (Exclusivo en CD)</li>
-      </ul>
-
-      <h3>BETTER</h3>
-      <ul>
-        <li>BETTER</li>
-        <li>Scorpion</li>
-        <li>BETTER (Instrumental)</li>
-        <li>Scorpion (Instrumental)</li>
-      </ul>
-
-      <h3>Kura Kura</h3>
-      <ul>
-        <li>Kura Kura</li>
-        <li>Strawberry Moon</li>
-        <li>Kura Kura (Instrumental)</li>
-        <li>Strawberry Moon (Instrumental)</li>
-      </ul>
-
-      <h3>Perfect World</h3>
-      <ul>
-        <li>Perfect World</li>
-        <li>BETTER</li>
-        <li>Good at Love</li>
-        <li>Fanfare</li>
-        <li>Kura Kura</li>
-        <li>Four-leaf Clover</li>
-        <li>In the summer</li>
-        <li>PIECES OF LOVE</li>
-        <li>Thank you, Family</li>
-        <li>PROMISE</li>
-      </ul>
-
-      <h3>Doughnut</h3>
-      <ul>
-        <li>Doughnut</li>
-        <li>Wonderful Day</li>
-        <li>Doughnut (Instrumental)</li>
-        <li>Wonderful Day (Instrumental)</li>
-      </ul>
-
-      <h3>#TWICE4 (Japanese ver.)</h3>
-      <ul>
-        <li>I Can’t Stop Me – Japanese ver.</li>
-        <li>Cry For Me – Japanese ver.</li>
-        <li>Alcohol-Free – Japanese ver.</li>
-        <li>Scientist – Japanese ver.</li>
-      </ul>
-      
-      <h3>Just Be Yourself</h3>
-      <ul>
-        <li>Just Be Yourself</li>
-      </ul>
-
-      <h3>Celebrate </h3>
-      <ul>
-        <li>Celebrate</li>
-        <li>Voices of Delight</li>
-        <li>TICK TOCK</li>
-        <li>Flow like waves</li>
-        <li>That’s all I’m saying</li>
-        <li>Bitter Sweet</li>
-        <li>Sandcastle</li>
-        <li>Just Be Yourself </li>
-        <li>Doughnut</li>
-      </ul>
-
-      <h3>Hare Hare (pre-release)</h3>
-      <ul>
-        <li>Hare Hare</li>
-      </ul>
-
-      <h3>Hare Hare</h3>
-      <ul>
-        <li>Hare Hare</li>
-        <li>Catch a Wave</li>
-        <li>Hare Hare (Instrumental)</li>
-        <li>Catch a Wave (Instrumental)</li>
-      </ul>
-
-      <h3>Dance Again</h3>
-      <ul>
-        <li>Dance Again</li>
-      </ul>
-
-      <h3>DIVE (pre-release)</h3>
-      <ul>
-        <li>DIVE</li>
-      </ul>
-
-      <h3>DIVE</h3>
-      <ul>
-        <li>Beyond the Horizon</li>
-        <li>DIVE</li>
-        <li>Ocean Deep</li>
-        <li>LOVE WARNING</li>
-        <li>Here I Am</li>
-        <li>Inside of me</li>
-        <li>Peach Soda</li>
-        <li>Echoes of Heart</li>
-        <li>Dance Again</li>
-        <li>Hare Hare</li>
-      </ul>
-
-      <h3>The wish</h3>
-      <ul>
-        <li>The wish</li>
-      </ul>
-
-      <h3>Talk that Talk (Japanese ver.)</h3>
-      <ul>
-        <li>Talk that Talk (Japanese ver.)</li>
-      </ul>
-
-      <h3>#TWICE5</h3>
-      <ul>
-        <li>Talk that Talk (Japanese ver.)</li>
-        <li>SET ME FREE (Japanese ver.)</li>
-        <li>ONE SPARK (Japanese ver.)</li>
-        <li>Talk that Talk</li>
-        <li>SET ME FREE</li>
-        <li>I GOT YOU</li>
-        <li>ONE SPARK</li>
-        <li>Strategy</li>
-      </ul>
-
-      <h3>ENEMY (pre-release)</h3>
-      <ul>
-        <li>ENEMY</li>
-      </ul>
-
-      <h3>Like 1 (pre-release)</h3>
-      <ul>
-        <li>Like 1</li>
-      </ul>
-
-      <h3>ENEMY</h3>
-      <ul>
-        <li>Up to you</li>
-        <li>ENEMY</li>
-        <li>FINE</li>
-        <li>One day</li>
-        <li>Blind in Love</li>
-        <li>Love is more</li>
-        <li>The wish</li>
-        <li>Glow</li>
-        <li>Like 1</li>
-      </ul>
-
-      <h2 id="Internacional">Internacional</h2>
-      <h3>More & More (English Ver.)</h3>
-      <ul>
-        <li>More & More (English Ver.)</li>
-      </ul>
-
-      <h3>I Can’t Stop Me (English Ver.)</h3>
-      <ul>
-        <li>I Can’t Stop Me (English Ver.)</li>
-      </ul>
-
-      <h3>The Feels</h3>
-      <ul>
-        <li>The Feels</li>
-        <li>The Feels (Stereotypes Remix)</li>
-        <li>The Feels (YVES V Remix)</li>
-        <li>The Feels (Instrumental)</li>
-        <li>The Feels (The Stereotypes Remix [Instrumental])</li>
-        <li>The Feels (The YVES V Remix [Instrumental])</li>
-      </ul>
-
-      <h3>Moonlight Sunrise</h3>
-      <ul>
-        <li>Moonlight Sunrise</li>
-      </ul>
-
-      <h3>WE PRAY (TWICE Version)</h3>
-      <ul>
-        <li>WE PRAY (TWICE Version) (feat. Little Simz, Burna Boy, Elyanna)</li>
-      </ul>
-
-      <h3>KPop Demon Hunters</h3>
-      <ul>
-        <li>TAKEDOWN (JEONGYEON, JIHYO, CHAEYOUNG)</li>
-        <li>Strategy</li>
-      </ul>
-
-      <h3>superstars (with Saweetie)</h3>
-      <ul>
-        <li>superstars (with Saweetie)</li>
-      </ul>
-
     </section>
 
   </main>
 
 </div>
 
-  <a href="#" id="theme-toggle" class="modo-oscuro-btn"><i id="theme-icon" class="fa-regular fa-moon"></i></a>
-
-<footer class="footer">
-  <div class="footer-links">
-    <a href="#">Sobre nosotros</a>
-    <a href="#">Contacto</a>
-    <a href="#">Términos de uso</a>
-  </div>
-
-  <div class="footer-icon">
-    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    <a href="#"><i class="fa-brands fa-discord"></i></a>
-  </div>
-</footer>
-
-<div class="creditos">
-  <a href="https://www.kpop-wiki.com">Kpop-Wiki</a> © 2026 by
-  <a href="https://example.com">David Fernández</a> is licensed under
-  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
-  <img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="">
-  <img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="">
-  <img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="">
-  <img src="https://mirrors.creativecommons.org/presskit/icons/sa.svg" alt="">
-</div>
-
-  <script src="js/app.js"></script>
-</body>
-</html>
-
-
-
+<?php include '../../../includes/footer.php'; ?>

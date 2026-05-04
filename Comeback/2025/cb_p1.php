@@ -40,6 +40,10 @@ $meses_abreviados = [
     12 => 'Dic'
 ];
 
+$extra_css = 'Comeback/2025/css/lightMode.css';
+$extra_css_tablet = 'Comeback/2025/css/lightModeTablet.css';
+$extra_css_mobile = 'Comeback/2025/css/lightModeMovil.css';
+
 include '../../includes/header.php';
 ?>
 

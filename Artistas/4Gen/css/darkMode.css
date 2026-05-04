@@ -66,6 +66,36 @@ body {
   color: black;
 }
 
+/* LOGIN/PERFIL */
+.header-derecha {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 20px;
+}
+
+.header-derecha a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.header-derecha a i {
+  font-size: 28px;
+}
+
+.header-derecha a:hover {
+  transform: scale(1.1);
+}
+
+.header-derecha .logout-link {
+  color: #721c24;
+}
+
 /* MENÚ */
 .menu {
   display: flex;
@@ -106,7 +136,7 @@ body {
   flex-direction: column;
   background-color: rgb(163, 140, 210);
   width: 100%;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   z-index: 1001;
 }
 
@@ -169,7 +199,7 @@ body {
 }
 
 .footer-links a:hover {
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 }
 
@@ -219,7 +249,7 @@ body {
 
 /* CUARTA GENERACIÓN */
 
-.grupos h2{
+.grupos h2 {
   text-align: center;
   margin: 20px auto 20px;
 }
@@ -239,7 +269,8 @@ body {
   padding: 15px;
   text-align: center;
   color: #f4f1fb;
-  transition: box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .grupo-card:hover {
@@ -328,4 +359,45 @@ body {
 .paginacion .activo {
   background-color: #ffeb3b;
   color: black;
+}
+
+
+.fav-container {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 20;
+}
+
+.fav-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: #fff;
+  padding: 0;
+  outline: none;
+}
+
+.fav-btn:hover {
+  transform: scale(1.2);
+  background: rgba(255, 255, 255, 0.3);
+  color: #ff4d4d;
+}
+
+.fav-btn.active {
+  color: #ff4d4d;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.fav-btn i {
+  font-size: 20px;
+  line-height: 1;
 }

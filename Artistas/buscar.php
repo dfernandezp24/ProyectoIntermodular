@@ -3,13 +3,13 @@ require_once '../includes/db.php';
 
 $query = trim($_GET['q'] ?? '');
 $current_page = 'artistas';
-$extra_css = 'Artistas/1Gen/css/lightMode.css';
-$extra_css_tablet = 'Artistas/1Gen/css/lightModeTablet.css';
-$extra_css_mobile = 'Artistas/1Gen/css/lightModeMovil.css';
+$extra_css = 'Artistas/css/lightMode.css';
+$extra_css_tablet = 'Artistas/css/lightModeTablet.css';
+$extra_css_mobile = 'Artistas/css/lightModeMovil.css';
 
 $artists = [];
 if (!empty($query)) {
-    $stmt = $pdo->prepare("SELECT * FROM artists WHERE (name LIKE ? OR company LIKE ?) AND generation = 1");
+    $stmt = $pdo->prepare("SELECT * FROM artists WHERE name LIKE ? OR company LIKE ?");
     $stmt->execute(["%$query%", "%$query%"]);
     $artists = $stmt->fetchAll();
 }
@@ -29,7 +29,7 @@ include '../includes/header.php';
 
     <?php if (empty($artists)): ?>
         <p style="text-align: center; font-size: 20px; margin: 50px 0;">No se encontraron artistas que coincidan con tu
-            búsqueda en la 1ª Generación.</p>
+            búsqueda.</p>
     <?php else: ?>
         <div class="grupos-grid">
             <?php foreach ($artists as $artist):

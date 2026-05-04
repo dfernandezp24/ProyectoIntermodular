@@ -18,6 +18,10 @@ $stmt->execute();
 $promociones = $stmt->fetchAll();
 
 
+$extra_css = 'Comeback/Promociones/css/lightMode.css';
+$extra_css_tablet = 'Comeback/Promociones/css/lightModeTablet.css';
+$extra_css_mobile = 'Comeback/Promociones/css/lightModeMovil.css';
+
 include '../../includes/header.php';
 ?>
 
