@@ -9,6 +9,9 @@ $username = 'root';
 $password = '';
 $base_url = '/tfc';
 
+$spotify_client_id = '7993fa2e391340f48203e931a0fdb16d';
+$spotify_client_secret = 'c3e388926abb42c29ba2289b242dffb3';
+
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

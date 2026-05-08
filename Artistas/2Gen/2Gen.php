@@ -72,12 +72,18 @@ include '../../includes/header.php';
 
     <?php if ($total_pages > 1): ?>
         <nav class="paginacion">
+            <?php if ($page > 1): ?>
+                <a href="?p=<?= $page - 1 ?>" class="flecha">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </a>
+            <?php endif; ?>
+
             <?php for ($i = 1; $i <= $total_pages; $i++): ?>
                 <a href="?p=<?= $i ?>" class="<?= ($page == $i) ? 'activo' : '' ?>"><?= $i ?></a>
             <?php endfor; ?>
 
             <?php if ($page < $total_pages): ?>
-                <a href="?p=<?= $page + 1 ?>">
+                <a href="?p=<?= $page + 1 ?>" class="flecha">
                     <i class="fa-solid fa-chevron-right"></i>
                 </a>
             <?php endif; ?>
