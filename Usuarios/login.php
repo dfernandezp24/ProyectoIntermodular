@@ -39,7 +39,7 @@ $extra_js_local = 'Usuarios/js/app.js';
 ob_start();
 include '../includes/header.php';
 $header = ob_get_clean();
-echo str_replace('/tfc/PaginaPrincipal/css/', '/tfc/Usuarios/css/', $header);
+echo str_replace($base_url . '/PaginaPrincipal/css/', $base_url . '/Usuarios/css/', $header);
 ?>
 
 <main class="auth-page">

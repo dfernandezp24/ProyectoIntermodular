@@ -95,6 +95,19 @@ usort($all_tracks, function ($a, $b) {
     return $b['popularity'] - $a['popularity'];
 });
 
+$filtered_tracks = [];
+$seen_songs = [];
+foreach ($all_tracks as $track) {
+    $song_key = strtolower(trim($track['artist'])) . '|' . strtolower(trim($track['title']));
+    if (!isset($seen_songs[$song_key])) {
+        $seen_songs[$song_key] = true;
+        $filtered_tracks[] = $track;
+    } else {
+        echo "  -> Filtrando duplicado de menor popularidad: " . $track['artist'] . " - " . $track['title'] . " (Popularidad: " . $track['popularity'] . ")\n";
+    }
+}
+$all_tracks = $filtered_tracks;
+
 try {
     $pdo->prepare("TRUNCATE TABLE virales")->execute();
 

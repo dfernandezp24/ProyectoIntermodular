@@ -7,7 +7,15 @@ $host = 'localhost';
 $dbname = 'kpop_wiki';
 $username = 'root';
 $password = '';
-$base_url = '/tfc';
+$doc_root = !empty($_SERVER['DOCUMENT_ROOT']) ? str_replace('\\', '/', realpath($_SERVER['DOCUMENT_ROOT'])) : '';
+$proj_root = str_replace('\\', '/', realpath(dirname(__DIR__)));
+$base_url = '';
+if ($doc_root && stripos($proj_root, $doc_root) === 0) {
+    $base_url = substr($proj_root, strlen($doc_root));
+} else {
+    $base_url = '/ProyectoIntermodular';
+}
+$base_url = rtrim(str_replace('\\', '/', $base_url), '/');
 
 $spotify_client_id = '7993fa2e391340f48203e931a0fdb16d';
 $spotify_client_secret = 'c3e388926abb42c29ba2289b242dffb3';
